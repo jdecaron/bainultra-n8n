@@ -1,22 +1,22 @@
-FROM n8nio/n8n:latest
+version: '3.8'
 
-# Switch to root user to install packages and modify system directories
-USER root
+services:
+  n8n:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=n8n.bainultra.dev
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=https
+      - NODE_ENV=production
+      - WEBHOOK_URL=https://n8n.bainultra.dev/
+    volumes:
+      - n8n_data:/home/node/.n8n
 
-# Install necessary system packages using apk
-# build-base, python3-dev, geoip-dev are needed for potential native dependencies
-# wget for downloading, git for source control (might be needed by Go), bash (useful shell)
-RUN apk update && \
-    apk add --no-cache \
-        wget \
-        ffmpeg
-
-
-ENV N8N_HOST=n8n.bainultra.dev
-ENV N8N_PORT=5678
-ENV N8N_PROTOCOL=https
-ENV NODE_ENV=production
-ENV WEBHOOK_URL=https://n8n.bainultra.dev/
-
-# Switch back to the non-root user that n8n runs as (typically 'node')
-USER node
+volumes:
+  n8n_data:
