@@ -18,7 +18,7 @@ try {
         process.env[key] = value;
       }
     }
-    console.log('Loaded Wrangler vars into process.env');
+    console.log('Loaded Wrangler vars into process.env (no conflict)');
   }
 } catch (error) {
   console.warn('Failed to load wrangler.jsonc vars:', error.message);
