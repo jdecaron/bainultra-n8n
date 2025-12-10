@@ -20,7 +20,7 @@ try {
   console.warn('Failed to load wrangler.jsonc vars:', error.message);
 }
 
-const app = await import('./index.js');
+const app = await import('./main.js');
 const port = process.env.PORT || 3000;
 
 serve({
