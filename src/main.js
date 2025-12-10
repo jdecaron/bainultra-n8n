@@ -13,7 +13,7 @@ try {
   const config = parse(wranglerContent);
 
   if (config.vars) {
-    Object.assign(process.env, config.vars);
+    // Object.assign(process.env, config.vars);
     console.log('Loaded Wrangler vars into process.env');
   }
 } catch (error) {
