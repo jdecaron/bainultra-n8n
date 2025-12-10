@@ -1,14 +1,31 @@
-import { Hono } from 'hono'
-import { proxy } from 'hono/proxy'
+import { serve } from '@hono/node-server';
+import { readFileSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { parse } from 'jsonc-parser';
 
-const app = new Hono()
+// Load Wrangler vars as process.env for Node.js runtime
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const wranglerPath = join(__dirname, '../wrangler.jsonc');
 
-app.all('/404-uc3C6', (c) => {
-  return c.notFound()
-})
+try {
+  const wranglerContent = readFileSync(wranglerPath, 'utf-8');
+  const config = parse(wranglerContent);
 
-app.all('*', (c) => {
-  return proxy(`http://127.0.0.1:5678${c.req.path}`)
-})
+  if (config.vars) {
+    Object.assign(process.env, config.vars);
+    console.log('Loaded Wrangler vars into process.env');
+  }
+} catch (error) {
+  console.warn('Failed to load wrangler.jsonc vars:', error.message);
+}
 
-export default app
+const app = await import('./hono.js');
+const port = process.env.PORT || 3000;
+
+serve({
+  fetch: app.default.fetch,
+  port
+});
+
+console.log(`Server running at http://localhost:${port}`);
