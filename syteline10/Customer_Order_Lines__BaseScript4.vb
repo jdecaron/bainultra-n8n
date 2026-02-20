@@ -2743,5 +2743,20 @@ Namespace SyteLine.FormScripts
             End If
         End Sub
 
+        ' Custom button click to open external N8N form with Customer Order number
+        Sub ConfigureN8nButtonClick()
+            Dim coNum As String = ThisForm.PrimaryIDOCollection.GetCurrentObjectProperty("CoNum")
+            
+            If Not String.IsNullOrEmpty(coNum) Then
+                Dim encodedCoNum As String = System.Uri.EscapeDataString(coNum)
+                Dim fullUrl As String = "https://n8n.bainultra.dev/form/a35b0cad-1d7c-439f-a1e5-744311054b2a?orderNumber=" & encodedCoNum
+                ThisForm.Variables("N8nUrl").SetValue(fullUrl)
+                ThisForm.GenerateEvent("OpenN8nUrl")
+            Else
+                ThisForm.CallGlobalScript("MsgApp", "Clear", "Prompt", "SuccessFailure", _
+                    "mE=CmdInvalid", "@sSelectCustomerOrderFirst", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
+            End If
+        End Sub
+
     End Class
 End Namespace
