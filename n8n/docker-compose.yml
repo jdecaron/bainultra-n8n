@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   n8n:
-    image: n8nio/n8n:stable
+    image: n8nio/n8n:next
     container_name: n8n
     restart: unless-stopped
     ports:
