@@ -11,6 +11,7 @@ services:
       - N8N_HOST=n8n.bainultra.dev
       - N8N_PORT=5678
       - N8N_PROTOCOL=https
+      - NODE_FUNCTION_ALLOW_EXTERNAL=*
       - NODE_ENV=production
       - WEBHOOK_URL=https://n8n.bainultra.dev/
     volumes:
