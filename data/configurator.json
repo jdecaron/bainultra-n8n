@@ -251,12 +251,12 @@
     },
     {
       "parameters": {
-        "jsCode": "const { fetch } = require('undici');\n\nfunction uniqueKey() {\n  const now = new Date();\n  const date = now.toISOString().slice(0, 10); // 2026-03-01\n  const ms = now % 86400000;\n  const rand = String(Math.floor(Math.random() * 1000)).padStart(3, '0');\n  return `${date}_${ms}_${rand}`;\n}\nconst key = uniqueKey()\n\nlet configuration\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color &&\n    product.json.Surface_Finish === $(\"Surface Finish Form\").first().json[\"Surface Finish\"].split(',')[0] &&\n    product.json.Line === $(\"Line Form\").first().json[\"Line\"]\n  ) {\n    configuration = { base: product.json, co_num: $(\"Customer Order Form\").first().json['Customer Order'], options: [] }\n  }\n})\n\nconst configurationJSON = JSON.stringify(configuration)\n\nawait fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(configurationJSON)}`);\n\nreturn { configuration, configurationJSON, key }"
+        "jsCode": "const { fetch } = require('undici');\n\nfunction uniqueKey() {\n  const now = new Date()\n  const date = now.toISOString().slice(0, 10)\n  const ms = now % 86400000\n  const rand = String(Math.floor(Math.random() * 1000)).padStart(3, '0')\n  return `${date}_${ms}_${rand}`\n}\nconst key = uniqueKey()\n\nlet configuration\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color &&\n    product.json.Surface_Finish === $(\"Surface Finish Form\").first().json[\"Surface Finish\"].split(',')[0] &&\n    product.json.Line === $(\"Line Form\").first().json[\"Line\"]\n  ) {\n    configuration = { base: product.json, co_num: $(\"Customer Order Form\").first().json['Customer Order'], options: [] }\n  }\n})\n\nawait fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n\nreturn { configuration, key }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2672,
+        -2608,
         32
       ],
       "id": "4a2135a4-090f-45f2-8a91-f52f3cfadc6a",
@@ -2370,51 +2370,6 @@
       ],
       "id": "bbc0ad3d-4d46-448e-a6f1-5f3364e58134",
       "name": "Call 'add-options' HBR"
-    },
-    {
-      "parameters": {
-        "dataTableId": {
-          "__rl": true,
-          "value": "92JHN82usfnNxf1f",
-          "mode": "list",
-          "cachedResultName": "configurations",
-          "cachedResultUrl": "/projects/e1Ye65DfJRS4YYu9/datatables/92JHN82usfnNxf1f"
-        },
-        "columns": {
-          "mappingMode": "defineBelow",
-          "value": {
-            "options": "={{ $('product').first().json.configurationJSON }}"
-          },
-          "matchingColumns": [
-            "options"
-          ],
-          "schema": [
-            {
-              "id": "options",
-              "displayName": "options",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "readOnly": false,
-              "removed": false
-            }
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
-        },
-        "options": {
-          "optimizeBulk": false
-        }
-      },
-      "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1,
-      "position": [
-        -2448,
-        32
-      ],
-      "id": "5c1453e0-8c00-4707-bc7b-60f307f76ef8",
-      "name": "Insert Product"
     },
     {
       "parameters": {
