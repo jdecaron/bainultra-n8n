@@ -11,10 +11,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -6480,
-        32
+        -5152,
+        -1040
       ],
-      "id": "c777a1b6-6301-4cca-9165-700603eeb95f",
+      "id": "be9781e2-ae25-4c65-aef0-4489dc8fea05",
       "name": "Collection Form",
       "webhookId": "895adc30-15c3-4496-864e-d765bd95cee1"
     },
@@ -29,10 +29,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -6032,
-        32
+        -4704,
+        -1040
       ],
-      "id": "34194eca-756e-4b95-bc18-3d0da01674d5",
+      "id": "232c3fd2-c3e4-43cf-a39d-daf50b0145d9",
       "name": "Installation Type Form",
       "webhookId": "895adc30-15c3-4496-864e-d765bd95cee1"
     },
@@ -43,10 +43,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -6688,
-        32
+        -5360,
+        -1040
       ],
-      "id": "a6088b84-bdcf-4f16-8598-a75500fecb22",
+      "id": "f189ce50-c4a3-410d-8398-cbffcc9084fb",
       "name": "Collection List"
     },
     {
@@ -56,10 +56,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -6256,
-        32
+        -4928,
+        -1040
       ],
-      "id": "8549e806-5134-49ab-b370-a19f3bb2b97f",
+      "id": "443ad208-9e54-4be8-bc3d-02729b55de8e",
       "name": "Installation Type List"
     },
     {
@@ -69,10 +69,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -5808,
-        32
+        -4480,
+        -1040
       ],
-      "id": "42d67490-9491-4ad2-a408-1935b1153dd2",
+      "id": "35aacbdf-675d-4130-9afb-5902019a53b6",
       "name": "Model List"
     },
     {
@@ -86,10 +86,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -5584,
-        32
+        -4256,
+        -1040
       ],
-      "id": "e8b52c17-15b3-4941-b04b-8a674cc66707",
+      "id": "2e02e6e3-37f3-40da-b633-3715044c1a77",
       "name": "Model Form",
       "webhookId": "895adc30-15c3-4496-864e-d765bd95cee1"
     },
@@ -100,10 +100,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -5360,
-        32
+        -4032,
+        -1040
       ],
-      "id": "19dab3ee-1cd0-4990-adb0-5dcef1ab1c30",
+      "id": "09097f15-1e70-4459-97f4-d5dd6670597e",
       "name": "Size List"
     },
     {
@@ -117,10 +117,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -5136,
-        32
+        -3808,
+        -1040
       ],
-      "id": "8549dbfb-b519-440f-9423-474c11218efb",
+      "id": "c75ef0a9-c4ce-435c-aec7-0dfa5f634cd2",
       "name": "Dimension Form",
       "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09",
       "notesInFlow": false
@@ -132,10 +132,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -4912,
-        32
+        -3584,
+        -1040
       ],
-      "id": "1e181313-c905-4c15-ba8c-12f8a72cc303",
+      "id": "92f80676-15ed-43d7-9ccc-39943d33dfb8",
       "name": "Deck Feature List"
     },
     {
@@ -149,10 +149,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -4688,
-        32
+        -3360,
+        -1040
       ],
-      "id": "c5e9b7d9-b036-4488-a196-b6365c6b6d64",
+      "id": "f0a4c1c9-59df-437c-b678-c8ed1af3dfc7",
       "name": "Deck Feature Form",
       "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
     },
@@ -163,10 +163,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -4464,
-        32
+        -3136,
+        -1040
       ],
-      "id": "1b242448-fcd3-4042-b2c6-89de638d37f4",
+      "id": "9f472d1d-42e0-4141-964a-1f267a14b227",
       "name": "Handing List"
     },
     {
@@ -180,10 +180,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -4240,
-        32
+        -2912,
+        -1040
       ],
-      "id": "cdf4381f-b687-4d5b-a059-718468696b63",
+      "id": "b51501fa-7c4d-4236-9a0d-8f4bcdbbabc9",
       "name": "Handing Form",
       "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
     },
@@ -194,10 +194,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -4016,
-        32
+        -2688,
+        -1040
       ],
-      "id": "b944eb45-38b1-4111-ac40-e746a461257c",
+      "id": "38a2fabf-7559-4653-bee2-5c3b4766bd89",
       "name": "Color List"
     },
     {
@@ -211,10 +211,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -3792,
-        32
+        -2464,
+        -1040
       ],
-      "id": "1b196b2a-95c1-40f7-a2f3-6827772de3e9",
+      "id": "603de99b-21f1-46a3-92db-2513a99678e3",
       "name": "Color Form",
       "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
     },
@@ -225,10 +225,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3568,
-        32
+        -2240,
+        -1040
       ],
-      "id": "495aba01-33b7-4e9f-9f12-fd4a444857ee",
+      "id": "bdd47cb3-7fe1-4c0d-9160-d531f256886b",
       "name": "Finish List"
     },
     {
@@ -242,24 +242,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -3344,
-        32
+        -2016,
+        -1040
       ],
-      "id": "4d5362ef-0fe1-413a-bb03-c28b142685b6",
+      "id": "b3f2904b-3505-449e-b7b6-f57a05ce1b74",
       "name": "Surface Finish Form",
       "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
     },
     {
       "parameters": {
-        "jsCode": "const { fetch } = require('undici');\n\nfunction uniqueKey() {\n  const now = new Date()\n  const date = now.toISOString().slice(0, 10)\n  const ms = now % 86400000\n  const rand = String(Math.floor(Math.random() * 1000)).padStart(3, '0')\n  return `${date}_${ms}_${rand}`\n}\nconst key = uniqueKey()\n\nlet configuration\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color &&\n    product.json.Surface_Finish === $(\"Surface Finish Form\").first().json[\"Surface Finish\"].split(',')[0] &&\n    product.json.Line === $(\"Line Form\").first().json[\"Line\"]\n  ) {\n    configuration = { base: product.json, co_num: $(\"Customer Order Form\").first().json['Customer Order'], options: [] }\n  }\n})\n\nawait fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n\nreturn { configuration, key }"
+        "jsCode": "const { fetch } = require('undici')\n\nfunction uniqueKey() {\n  const now = new Date()\n  const date = now.toISOString().slice(0, 10)\n  const ms = now % 86400000\n  const rand = String(Math.floor(Math.random() * 1000)).padStart(3, '0')\n  return `${date}_${ms}_${rand}`\n}\nconst key = uniqueKey()\n\nlet configuration\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color &&\n    product.json.Surface_Finish === $(\"Surface Finish Form\").first().json[\"Surface Finish\"].split(',')[0] &&\n    product.json.Line === $(\"Line Form\").first().json[\"Line\"]\n  ) {\n    configuration = { base: product.json, co_num: $(\"Customer Order Form\").first().json['Customer Order'], options: [] }\n  }\n})\n\nawait fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n\nreturn { configuration, key }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2608,
-        32
+        -1280,
+        -1040
       ],
-      "id": "4a2135a4-090f-45f2-8a91-f52f3cfadc6a",
+      "id": "cc058eeb-9dc0-4d49-a98e-c01e82f15ae8",
       "name": "product"
     },
     {
@@ -273,51 +273,51 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -656,
-        -160
+        672,
+        -1232
       ],
-      "id": "1fb220be-58d2-49b7-8850-8347827f97d6",
+      "id": "da62155f-dcdc-4717-bbb0-25edc1c9ff91",
       "name": "TMU Second HBR Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = $('HBR').first().json.secondHeatingZone\nif ($(\"TMU Second HBR Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = $('HBR').first().json.secondHeatingZone\nif ($(\"TMU Second HBR Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -432,
-        -160
+        896,
+        -1232
       ],
-      "id": "f112f057-c906-45da-b0b2-00ca9f3c7494",
+      "id": "fb4af5c1-a07c-4f7a-bf18-fb450ed6ef82",
       "name": "Second HBR"
     },
     {
       "parameters": {
-        "jsCode": "let secondHeatingZone = []\nlet options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMMOD00T-02 2nd not available\t\t\t\t\t\t\t\t\t\t\t\n// BAMSRB00T-02 2nd included\n// BSCMOF00T-01 2nd + price\n// Product_SKU = \"BSCMOF00T-01\"\n$(\"Options Sheet Collection\").all().forEach((option) => {\n  if (\n    option.json[\"PRODUCT SKU\"] === Product_SKU &&\n    option.json[\"FEATURE\"] == \"WTS\"\n  ) {\n    if (option.json[\"Option Price\"] > 0) {\n      secondHeatingZone.push(option.json)\n    } else {\n      options.push(option.json)\n    }\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Second Heated Backrest\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": secondHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], secondHeatingZone, options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let secondHeatingZone = []\nlet options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMMOD00T-02 2nd not available\t\t\t\t\t\t\t\t\t\t\t\n// BAMSRB00T-02 2nd included\n// BSCMOF00T-01 2nd + price\n// Product_SKU = \"BSCMOF00T-01\"\n$(\"Options Sheet Collection\").all().forEach((option) => {\n  if (\n    option.json[\"PRODUCT SKU\"] === Product_SKU &&\n    option.json[\"FEATURE\"] == \"WTS\"\n  ) {\n    if (option.json[\"Option Price\"] > 0) {\n      secondHeatingZone.push(option.json)\n    } else {\n      options.push(option.json)\n    }\n  }\n})\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nconst dropdown = {\n  \"fieldLabel\": \"Second Heated Backrest\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": secondHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options, secondHeatingZone }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1328,
-        -96
+        0,
+        -1168
       ],
-      "id": "6212f0c0-e57e-46af-a578-3cf3ff5d82c5",
+      "id": "ce46fae2-acba-4d76-aa21-498f863f10ff",
       "name": "HBR",
       "executeOnce": false
     },
     {
       "parameters": {
-        "jsCode": "let firstHeatingZone = []\nlet secondHeatingZone = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMBRA0LN-01 2nd not available\n// BAMVOFN0N-01 1st & 2nd + price\n// Product_SKU = \"BAMBRA0LN-01\"\n$(\"Options Sheet Collection\").all().forEach((option) => {\n  if (\n    option.json[\"PRODUCT SKU\"] === Product_SKU &&\n    option.json[\"FEATURE\"] == \"WTS\"\n  ) {\n    if (option.json[\"PRODUCT_OPTION_NAME\"] === '2ND WARMTOUCHSHELL') {\n      secondHeatingZone.push(option.json)\n    }\n    else {\n      firstHeatingZone.push(option.json)\n    }\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Warm TouchShell (WTS)\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": firstHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nconst secondWTSdropdown = {\n  \"fieldLabel\": \"Second Warm TouchShell (WTS)\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": secondHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { firstHeatingZone, form: [ dropdown ], secondHeatingZone, id: $(\"Insert Product\").first().json.id, secondWTSform: [ secondWTSdropdown ] }"
+        "jsCode": "let firstHeatingZone = []\nlet secondHeatingZone = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMBRA0LN-01 2nd not available\n// BAMVOFN0N-01 1st & 2nd + price\n// Product_SKU = \"BAMBRA0LN-01\"\n$(\"Options Sheet Collection\").all().forEach((option) => {\n  if (\n    option.json[\"PRODUCT SKU\"] === Product_SKU &&\n    option.json[\"FEATURE\"] == \"WTS\"\n  ) {\n    if (option.json[\"PRODUCT_OPTION_NAME\"] === '2ND WARMTOUCHSHELL') {\n      secondHeatingZone.push(option.json)\n    }\n    else {\n      firstHeatingZone.push(option.json)\n    }\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Warm TouchShell (WTS)\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": firstHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nconst secondWTSdropdown = {\n  \"fieldLabel\": \"Second Warm TouchShell (WTS)\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": secondHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { firstHeatingZone, form: [ dropdown ], secondHeatingZone, , secondWTSform: [ secondWTSdropdown ] }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1776,
-        144
+        -448,
+        -928
       ],
-      "id": "6f572b5b-6b79-4ec3-9bf4-8c6d33c0b628",
+      "id": "cd42a920-4fbe-4368-8049-6d8abce7d18c",
       "name": "WTS",
       "executeOnce": false
     },
@@ -332,24 +332,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -1552,
-        144
+        -224,
+        -928
       ],
-      "id": "c947472c-ac44-4ec2-ba45-d7151099fd29",
+      "id": "74729e7d-6528-451b-8db1-b5f2d6b65b09",
       "name": "Tub First WTS Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = $('WTS').first().json.firstHeatingZone\nif ($(\"Tub First WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = $('WTS').first().json.firstHeatingZone\nif ($(\"Tub First WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1328,
-        144
+        0,
+        -928
       ],
-      "id": "28b3354f-8f83-44b7-9abd-4ab3e1657721",
+      "id": "010dacf8-b1c7-495b-b8e8-3c6d53cec54c",
       "name": "First WTS"
     },
     {
@@ -380,10 +380,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -880,
-        -96
+        448,
+        -1168
       ],
-      "id": "783d2aa6-a5c1-47d7-817d-0fa93f916f4b",
+      "id": "9da6a211-4eb1-4727-9809-226518cb374a",
       "name": "If Second HBR"
     },
     {
@@ -397,24 +397,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -656,
-        224
+        672,
+        -848
       ],
-      "id": "120a14c4-dae2-4eb8-8790-93a35e5bf548",
+      "id": "03832352-5955-4baf-9e91-661d4e1d2959",
       "name": "Tub Second WTS Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = $('WTS').first().json.secondHeatingZone\nif ($(\"Tub Second WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = $('WTS').first().json.secondHeatingZone\nif ($(\"Tub Second WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -432,
-        224
+        896,
+        -848
       ],
-      "id": "ba632e3e-f2c0-467d-9ccb-7a8a4aafc23a",
+      "id": "16e93bbe-531a-4dec-a131-4fe146f672ce",
       "name": "Second WTS"
     },
     {
@@ -424,10 +424,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        16,
-        32
+        1344,
+        -1040
       ],
-      "id": "f4ad21fd-cdb6-43c2-8ab8-cb285f047179",
+      "id": "ec684a82-68d4-48f3-82e4-7cc936a68a2a",
       "name": "Aroma"
     },
     {
@@ -458,10 +458,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        240,
-        32
+        1568,
+        -1040
       ],
-      "id": "59ce9d5f-11f2-4956-b45e-bc89b28bde10",
+      "id": "187ff6f4-8aad-4d60-9d87-3953c05eb7a9",
       "name": "If Aroma"
     },
     {
@@ -475,24 +475,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        464,
-        -48
+        1792,
+        -1120
       ],
-      "id": "dff8f463-342a-4e48-81e0-bbc3adea7638",
+      "id": "0d54c9bc-8a79-4847-bcb7-a66a5db5cad5",
       "name": "Aroma Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Aroma').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Aroma Form\").first().json[\"Aromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Aroma').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Aroma Form\").first().json[\"Aromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        688,
-        -48
+        2016,
+        -1120
       ],
-      "id": "a50d7d05-ff52-4698-a8c5-7c319fac66ae",
+      "id": "c0e13ff9-1654-4dd2-b351-b462c30f18a4",
       "name": "Aroma Selection"
     },
     {
@@ -502,10 +502,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1136,
-        32
+        2464,
+        -1040
       ],
-      "id": "b10e9c67-8233-405e-ae3f-b1fac1fcdc6c",
+      "id": "3d58e620-f498-4c62-8740-4ae5d4c8476b",
       "name": "Chromo"
     },
     {
@@ -536,10 +536,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        1360,
-        32
+        2688,
+        -1040
       ],
-      "id": "e6d8d8e8-009b-4533-8357-a481c5d4c3c3",
+      "id": "020039ae-03d3-4bc7-82a8-da188dff32b0",
       "name": "If Chromo"
     },
     {
@@ -553,24 +553,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        1584,
-        -48
+        2912,
+        -1120
       ],
-      "id": "91c73340-5d2b-4a32-929c-938af89c3751",
+      "id": "2ae3e969-485a-457d-9c22-593be82fe82b",
       "name": "Chromo Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Chromo').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Chromo Form\").first().json[\"Chromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Chromo').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Chromo Form\").first().json[\"Chromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1808,
-        -48
+        3136,
+        -1120
       ],
-      "id": "a4bac659-b01b-43e7-ab3c-ed2602616cdf",
+      "id": "8e75ff96-ad7b-485f-a4e2-9da24d1f0352",
       "name": "Chromo Selection"
     },
     {
@@ -635,10 +635,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3,
       "position": [
-        -2000,
-        32
+        -672,
+        -1040
       ],
-      "id": "b04b21fc-a1c6-40ef-a5bf-0685fd7aea62",
+      "id": "1c9a49f7-74fc-4788-8fad-b4a0091be21d",
       "name": "Line Switch"
     },
     {
@@ -703,10 +703,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3,
       "position": [
-        2256,
-        -48
+        3584,
+        -1120
       ],
-      "id": "93dfadff-583e-4e99-9eb4-82fde519bdeb",
+      "id": "08421023-baab-42b2-b3b2-47edfc7ea15d",
       "name": "Control Switch"
     },
     {
@@ -716,10 +716,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2480,
-        -112
+        3808,
+        -1184
       ],
-      "id": "53af68a9-86a7-4d84-93cd-bb819afad114",
+      "id": "8a175712-ffae-40bf-99c1-ceab8eb30196",
       "name": "MIA Control"
     },
     {
@@ -733,24 +733,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        2704,
-        -112
+        4032,
+        -1184
       ],
-      "id": "adf52908-c3b1-49ad-828c-2e4c2e9f7cab",
+      "id": "eb6aa6a3-7338-4f4d-bbf5-4100c78f9b32",
       "name": "MIA Control Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('MIA Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"MIA Control Form\").first().json[\"MIA Control\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('MIA Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"MIA Control Form\").first().json[\"MIA Control\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2928,
-        -112
+        4256,
+        -1184
       ],
-      "id": "ca80b8be-b14d-4e89-992d-157814ecf529",
+      "id": "8ad08494-231f-47c6-b880-27707a31e9c9",
       "name": "MIA Control Selection"
     },
     {
@@ -760,10 +760,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3376,
-        -112
+        4704,
+        -1184
       ],
-      "id": "5d98d784-ec75-4d3b-91c2-b7f47284dd7e",
+      "id": "c4e58f83-2271-4028-9062-6a3759175eba",
       "name": "BU-Touch Control"
     },
     {
@@ -777,24 +777,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        3600,
-        -112
+        4928,
+        -1184
       ],
-      "id": "b43ab2ea-186d-4f55-9b62-00b9964d4f5f",
+      "id": "3c19e0c5-43b7-41ae-9301-693a238ab23f",
       "name": "BU-Touch Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('BU-Touch Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"BU-Touch Form\").first().json[\"BU-Touch Control\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('BU-Touch Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"BU-Touch Form\").first().json[\"BU-Touch Control\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3824,
-        -112
+        5152,
+        -1184
       ],
-      "id": "dde4e328-af68-4de6-ad62-b2dc3fe69dea",
+      "id": "08e501d2-24b1-4e4b-8b06-30b044bab0eb",
       "name": "BU-Touch Control Selection"
     },
     {
@@ -804,10 +804,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        4720,
-        96
+        6048,
+        -976
       ],
-      "id": "93b045bc-49a4-45f8-9ccf-9812faef6253",
+      "id": "98a1135d-8805-40c5-b397-7e29c920a4f8",
       "name": "Grab Bars"
     },
     {
@@ -838,23 +838,23 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        4944,
-        96
+        6272,
+        -976
       ],
-      "id": "10f69dd3-9465-4586-abfe-e2d87ff39c25",
+      "id": "561028db-88b8-4a39-8ce7-b593b0b1ec7d",
       "name": "If Grab Bars"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Grab Bars').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Grab Bars Form\").first().json[\"Grab Bars\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Grab Bars').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Grab Bars Form\").first().json[\"Grab Bars\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        5392,
-        176
+        6720,
+        -896
       ],
-      "id": "ced7825e-a0a9-48e2-9891-0a5b40697aa6",
+      "id": "a4fbff4d-2c93-4c81-821e-980e6a47ae3f",
       "name": "Grab Bars Selection"
     },
     {
@@ -868,10 +868,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        5168,
-        176
+        6496,
+        -896
       ],
-      "id": "18fa772e-8744-400e-a5b7-4bf967445c4a",
+      "id": "6d0cc2d0-fcbc-4bc1-bd2a-f9dec76fa2aa",
       "name": "Grab Bars Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
@@ -882,10 +882,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        5840,
-        32
+        7168,
+        -1040
       ],
-      "id": "47a56cab-c4ad-4246-a678-8b79ce0b570c",
+      "id": "0815edca-a239-4131-a30c-7a35a062f320",
       "name": "Tile Flange"
     },
     {
@@ -916,10 +916,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        6064,
-        32
+        7392,
+        -1040
       ],
-      "id": "4c6648e5-690a-4564-91b7-862f5c8c1d9a",
+      "id": "922ea98e-a79a-4237-b2cc-096bf07ad52b",
       "name": "If Tile Flange"
     },
     {
@@ -933,24 +933,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        6288,
-        -48
+        7616,
+        -1120
       ],
-      "id": "62827855-8c83-4486-a51b-e5bf12d1973a",
+      "id": "d4126ada-2d8c-4c91-acf9-792bed0f522e",
       "name": "Tile Flange Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Tile Flange').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Tile Flange Form\").first().json[\"Tile Flange\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Tile Flange').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Tile Flange Form\").first().json[\"Tile Flange\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        6512,
-        -48
+        7840,
+        -1120
       ],
-      "id": "96c59846-7b1d-4e91-880e-fd2421111a4c",
+      "id": "66708bd1-1f31-4ac3-9131-226907532e7c",
       "name": "Tile Flange Selection"
     },
     {
@@ -991,10 +991,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -880,
-        144
+        448,
+        -928
       ],
-      "id": "550c1df2-aba5-49a0-8424-aff4e4bf4543",
+      "id": "9543ea9f-9f20-4813-83a7-59e7aea97a74",
       "name": "If Second WTS",
       "notesInFlow": false,
       "alwaysOutputData": false,
@@ -1007,10 +1007,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        6960,
-        32
+        8288,
+        -1040
       ],
-      "id": "47660bb3-7c56-4394-b36b-605506b058e0",
+      "id": "7fda7453-5041-4aca-a8a4-25b34535af55",
       "name": "Skirt"
     },
     {
@@ -1041,10 +1041,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        7184,
-        32
+        8512,
+        -1040
       ],
-      "id": "ede1dea0-0e6b-4369-a9b2-c8d40d418054",
+      "id": "fbfadfcc-e3c7-48f1-bf51-8531afc36285",
       "name": "If Skirt"
     },
     {
@@ -1058,24 +1058,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        7408,
-        -48
+        8736,
+        -1120
       ],
-      "id": "d480766a-0ab9-4140-95c5-8aa58bd6c9c9",
+      "id": "1d687f70-8a1c-47fb-8d2f-a08697531de7",
       "name": "Skirt Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Skirt').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Skirt Form\").first().json[\"Skirt\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Skirt').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Skirt Form\").first().json[\"Skirt\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        7632,
-        -48
+        8960,
+        -1120
       ],
-      "id": "5f5cba25-4259-4624-bd6e-b3da27bae9c6",
+      "id": "c80c167e-cf30-4673-a174-598c84d05613",
       "name": "Skirt Selection"
     },
     {
@@ -1085,10 +1085,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        8080,
-        32
+        9408,
+        -1040
       ],
-      "id": "b0df138c-d6d1-4859-85f0-6d396f28295b",
+      "id": "f0cefca0-3585-4039-bc64-7a2d89c51532",
       "name": "Feet"
     },
     {
@@ -1129,10 +1129,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        8304,
-        32
+        9632,
+        -1040
       ],
-      "id": "880280b3-3385-4a3f-91bd-77afdc890efb",
+      "id": "1d39aec6-9650-45fe-b900-6d41d038be57",
       "name": "If Feet"
     },
     {
@@ -1146,37 +1146,37 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        8528,
-        -48
+        9856,
+        -1120
       ],
-      "id": "efc319b4-c6f2-4926-9c4b-2fd6579ab87b",
+      "id": "bc9daa5b-3d4e-4f18-8fb4-204ff919f455",
       "name": "Feet Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Feet').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Feet Form\").first().json[\"Feet\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Feet').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Feet Form\").first().json[\"Feet\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        8752,
-        -48
+        10080,
+        -1120
       ],
-      "id": "f4beb78e-3bac-484a-8867-08b23a8ba819",
+      "id": "c9e9de1d-e704-4617-8db0-3a04f94d2db8",
       "name": "Feet Selection"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Deck').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Deck Form\").first().json[\"Deck\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Deck').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Deck Form\").first().json[\"Deck\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        9872,
-        -48
+        11200,
+        -1120
       ],
-      "id": "72dce562-56f9-4e42-b8ba-02e36eaa8979",
+      "id": "55679468-b8a9-447c-884f-c41b657ad320",
       "name": "Deck Selection"
     },
     {
@@ -1190,10 +1190,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        9648,
-        -48
+        10976,
+        -1120
       ],
-      "id": "1cb5f1b5-092b-4962-bf75-1c1a8973342d",
+      "id": "ff14140f-176e-4898-ad85-87ec49537fea",
       "name": "Deck Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
@@ -1225,10 +1225,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        9424,
-        32
+        10752,
+        -1040
       ],
-      "id": "9783aecd-e1b1-4f65-838d-9fbca8e384c9",
+      "id": "e1a3ac63-adb9-44ae-a68a-ba5435e76ccb",
       "name": "If Deck"
     },
     {
@@ -1238,10 +1238,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        9200,
-        32
+        10528,
+        -1040
       ],
-      "id": "73242fbf-9916-4a22-9caf-15de781d16f1",
+      "id": "96ad1a5d-6f4a-48b7-acfe-f3da4c76133d",
       "name": "Deck"
     },
     {
@@ -1251,10 +1251,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        10320,
-        32
+        11648,
+        -1040
       ],
-      "id": "40a6c872-99ce-4246-a77b-9c079b2923ed",
+      "id": "e00a1ebf-3a7e-42fe-b699-e222873ea7b2",
       "name": "Cushion"
     },
     {
@@ -1285,10 +1285,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        10544,
-        32
+        11872,
+        -1040
       ],
-      "id": "57b3aa20-5514-4609-8289-44d3203bae87",
+      "id": "160fbfb9-4335-431b-af91-b1ff962a06bb",
       "name": "If Cushion"
     },
     {
@@ -1302,24 +1302,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        10768,
-        -48
+        12096,
+        -1120
       ],
-      "id": "c79c5e4f-0905-42f2-bdc2-0e6f144bfd2a",
+      "id": "e821c6dc-5458-4078-b381-87c8bc2ac689",
       "name": "Cushion Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Cushion').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Cushion Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Cushion').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Cushion Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        10992,
-        -48
+        12320,
+        -1120
       ],
-      "id": "b3aae13f-320c-4680-9b25-ed69de89b00b",
+      "id": "c6447e33-9ffe-41cb-add0-1edc23c4c45c",
       "name": "Cushion Selection"
     },
     {
@@ -1329,10 +1329,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        11440,
-        32
+        12768,
+        -1040
       ],
-      "id": "d00a7b33-953a-44bb-bc0e-f4507d4f7eb7",
+      "id": "ed653f56-2216-4e97-ae4a-61973cff6e34",
       "name": "Island Tub Drain"
     },
     {
@@ -1363,10 +1363,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        11664,
-        32
+        12992,
+        -1040
       ],
-      "id": "5642ec22-da72-4bf2-bc4d-c4b028cb6f50",
+      "id": "80d24c65-9684-458f-8642-7316524b56e8",
       "name": "If Island Tub Drain"
     },
     {
@@ -1380,24 +1380,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        11888,
-        -48
+        13216,
+        -1120
       ],
-      "id": "80bcd7dc-b48a-4771-94c7-af3ae74da46e",
+      "id": "320c8c4c-461d-4488-91a7-6df7269bf959",
       "name": "Island Tub Drain Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Island Tub Drain').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Island Tub Drain Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Island Tub Drain').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Island Tub Drain Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        12112,
-        -48
+        13440,
+        -1120
       ],
-      "id": "88a892fc-6cbe-4889-b19d-563df5201498",
+      "id": "9d6c0bca-3081-4dd6-b16d-ce6e5830d8aa",
       "name": "Island Tub Drain Selection"
     },
     {
@@ -1407,10 +1407,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        15472,
-        -48
+        16800,
+        -1120
       ],
-      "id": "bf99c408-40e1-47fc-8000-3d12bc5511f8",
+      "id": "4a55fee8-c2a1-4f98-9bd2-b5b466d48f1c",
       "name": "Price"
     },
     {
@@ -1423,10 +1423,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        15760,
-        -48
+        17088,
+        -1120
       ],
-      "id": "5dbe0b1d-159b-4d10-8668-79c76ead29da",
+      "id": "08ed7509-982c-47ec-ac65-6ad4ee90000f",
       "name": "Price Form",
       "webhookId": "6bfe5117-80eb-4982-a34b-ab08cdafcf9c"
     },
@@ -1437,10 +1437,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        4272,
-        32
+        5600,
+        -1040
       ],
-      "id": "d6fd098d-f9ba-444e-8d94-f016e29dfe5e",
+      "id": "e23633e1-45c5-4ac6-a8e8-c31aa14d2a02",
       "name": "Combo Feet & Armrest"
     },
     {
@@ -1471,10 +1471,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        4496,
-        32
+        5824,
+        -1040
       ],
-      "id": "4812c50a-9c74-45be-b04f-4574db141e07",
+      "id": "8aa621b3-1e58-4a52-9807-84cc5386e2ba",
       "name": "If Combo Feet & Armrest"
     },
     {
@@ -1488,52 +1488,25 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        5168,
-        -112
+        6496,
+        -1184
       ],
-      "id": "f4bf2e23-da01-452e-b446-64fc56a67e90",
+      "id": "4914c3d8-c868-4364-a135-f9200d3b52a9",
       "name": "Combo Feet & Armrest Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Combo Feet & Armrest').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Combo Feet & Armrest Form\").first().json[\"Combo Feet & Armrest\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Combo Feet & Armrest').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Combo Feet & Armrest Form\").first().json[\"Combo Feet & Armrest\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        5392,
-        -112
+        6720,
+        -1184
       ],
-      "id": "1725bbe7-2b1a-4498-91d8-d98b07af13ca",
+      "id": "d903f995-094f-46fe-94a4-9ea47b1f73ad",
       "name": "Combo Feet & Armrest Selection"
-    },
-    {
-      "parameters": {
-        "operation": "get",
-        "dataTableId": {
-          "__rl": true,
-          "value": "92JHN82usfnNxf1f",
-          "mode": "list",
-          "cachedResultName": "configurations",
-          "cachedResultUrl": "/projects/e1Ye65DfJRS4YYu9/datatables/92JHN82usfnNxf1f"
-        },
-        "filters": {
-          "conditions": [
-            {
-              "keyValue": "={{ $(\"Insert Product\").first().json.id }}"
-            }
-          ]
-        }
-      },
-      "type": "n8n-nodes-base.dataTable",
-      "typeVersion": 1,
-      "position": [
-        15248,
-        -48
-      ],
-      "id": "4273e59b-3cda-4171-9478-83a811e14a1b",
-      "name": "Get Configuration"
     },
     {
       "parameters": {
@@ -1542,10 +1515,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        12560,
-        32
+        13888,
+        -1040
       ],
-      "id": "c677e6e7-9fce-46e5-bf61-caf034f5fca6",
+      "id": "b21bc9d2-3354-46ff-a9f8-c0e91ac42e10",
       "name": "Drain And Overflow Material"
     },
     {
@@ -1559,10 +1532,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        12784,
-        32
+        14112,
+        -1040
       ],
-      "id": "ffdf1b2d-7a60-4830-9bff-dc0517259397",
+      "id": "065e7f80-e41d-4396-a482-f295d69dd6d4",
       "name": "Drain And Overflow Material Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
@@ -1573,10 +1546,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        13456,
-        -112
+        14784,
+        -1184
       ],
-      "id": "4fad2fa7-575e-4316-a861-6d8c4ad52044",
+      "id": "312612b7-b20a-4570-b2d5-52871a7b5f9f",
       "name": "Drain And Overflow"
     },
     {
@@ -1590,24 +1563,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        13680,
-        -112
+        15008,
+        -1184
       ],
-      "id": "fc0b82dd-cf67-4710-a119-360464b2fef3",
+      "id": "2f10def0-fb1c-468e-a440-bde9015d148b",
       "name": "Drain And Overflow Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nif ($('Drain And Overflow Material Form').first().json['Drain And Overflow']) {\n  options .push(    \n    {\n      \"OPTION SKU\": \"BOVER00-00\",\n      \"PRODUCT_OPTION_NAME\": \"NO DRAIN\",\n      \"Option Price\": 0,\n    })\n} else {\n  for (const item of $('Drain And Overflow').first().json.options) {\n    if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Drain And Overflow Form\").first().json[\"Drain And Overflow\"]) {\n      options.push(item)\n    }\n  }  \n}\n\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nif ($('Drain And Overflow Material Form').first().json['Drain And Overflow']) {\n  options .push(    \n    {\n      \"OPTION SKU\": \"BOVER00-00\",\n      \"PRODUCT_OPTION_NAME\": \"NO DRAIN\",\n      \"Option Price\": 0,\n    })\n} else {\n  for (const item of $('Drain And Overflow').first().json.options) {\n    if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Drain And Overflow Form\").first().json[\"Drain And Overflow\"]) {\n      options.push(item)\n    }\n  }  \n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        13904,
-        -48
+        15232,
+        -1120
       ],
-      "id": "d5e1b4b4-8893-4617-9a24-c8cb02c321d0",
+      "id": "73bdff02-bdd6-4992-a1ae-6eb9b29944ab",
       "name": "Drain And Overflow Selection"
     },
     {
@@ -1695,10 +1668,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3,
       "position": [
-        13008,
-        16
+        14336,
+        -1056
       ],
-      "id": "a5a59d9b-6d83-4b4d-bc8a-f5fa91fdceec",
+      "id": "d4459023-9633-48ba-acae-2e4dda4eef4c",
       "name": "Drain And Overflow Material Form Switch"
     },
     {
@@ -1708,10 +1681,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        14352,
-        -48
+        15680,
+        -1120
       ],
-      "id": "111e6281-6374-463f-bd8a-018345d43427",
+      "id": "c714b1e5-be3c-4d47-b3fc-d0f585657bad",
       "name": "Early Motor Shipment"
     },
     {
@@ -1725,24 +1698,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        14576,
-        -48
+        15904,
+        -1120
       ],
-      "id": "4146cc9f-b86f-41bc-8e35-6ffd189ddbeb",
+      "id": "b39e7bce-c9ca-4381-b22e-050da2b4ed72",
       "name": "Early Motor Shipment Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Early Motor Shipment').first().json.options) {\n  if (\n    `${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] &&\n    $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] === `EARLY MOTOR SHIPMENT, +$${item[\"Option Price\"]}`\n     ) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+        "jsCode": "let options = []\n\nfor (const item of $('Early Motor Shipment').first().json.options) {\n  if (\n    `${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] &&\n    $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] === `EARLY MOTOR SHIPMENT, +$${item[\"Option Price\"]}`\n     ) {\n    options.push(item)\n  }\n}\n\nvar configuration\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\n// https://edge.bainultra.dev/api/v1/order-line-8e6e1d01\n\nreturn { configuration, options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        14800,
-        -48
+        16336,
+        -1120
       ],
-      "id": "8083b725-37e0-4b4e-b050-4699a7303eac",
+      "id": "318f9cbe-cdc7-48fc-984a-277d3f92b321",
       "name": "Early Motor Shipment Selection"
     },
     {
@@ -1756,10 +1729,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -2896,
-        32
+        -1568,
+        -1040
       ],
-      "id": "9117654a-c77e-4766-8323-166d12bf0959",
+      "id": "e1309459-2467-4ba3-9d1b-039cd71ab51d",
       "name": "Line Form",
       "webhookId": "6ecb2fe7-e6a4-46dc-8846-d39de88f8d6b"
     },
@@ -1770,10 +1743,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3120,
-        32
+        -1792,
+        -1040
       ],
-      "id": "b5078e6c-4a55-4fc9-aba1-f3d3c553f91b",
+      "id": "e6699e42-c3fb-4cd5-870c-52ca8675f256",
       "name": "Line"
     },
     {
@@ -1798,10 +1771,10 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        13232,
-        -112
+        14560,
+        -1184
       ],
-      "id": "4c92643a-d5ff-4cb7-93ad-4e82b494397c",
+      "id": "b4f2bb70-9de7-4348-aeec-6d099b3d3ae4",
       "name": "Drain And Overflow Brass Sheet Collection",
       "credentials": {
         "googleApi": {
@@ -1832,10 +1805,10 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        13232,
-        176
+        14560,
+        -896
       ],
-      "id": "ae8a14e1-32fb-4220-a7b4-a62e26c7db1f",
+      "id": "c607492d-548c-4c68-a077-adacecdd4173",
       "name": "Drain And Overflow PVC Sheet Collection",
       "credentials": {
         "googleApi": {
@@ -1846,33 +1819,6 @@
     },
     {
       "parameters": {
-        "method": "POST",
-        "url": "https://edge.bainultra.dev/api/v1/order-line-8e6e1d01",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Bearer sauce"
-            }
-          ]
-        },
-        "sendBody": true,
-        "specifyBody": "json",
-        "jsonBody": "={{ $('product').item.json.configuration }}",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.3,
-      "position": [
-        16000,
-        -48
-      ],
-      "id": "631f2071-492a-4e4d-9633-73b27f11708b",
-      "name": "HTTP Request"
-    },
-    {
-      "parameters": {
         "operation": "completion",
         "completionTitle": "Customer Order Line Created",
         "options": {}
@@ -1880,496 +1826,12 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        16208,
-        -48
+        17536,
+        -1120
       ],
-      "id": "180eb254-92fa-4e74-8e9a-118cd464f672",
+      "id": "5291de58-bb4b-4343-8a90-4841a1a5683d",
       "name": "Form",
       "webhookId": "aa4a9f46-cf16-42ca-9223-db07b827d996"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {},
-          "matchingColumns": [],
-          "schema": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": true
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        15024,
-        -48
-      ],
-      "id": "6e240e31-9456-4aab-9d22-e32f75980152",
-      "name": "Call 'add-options' Early Motor Shipment"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        14128,
-        -48
-      ],
-      "id": "7ecfd3cf-bac3-4588-adeb-12db7e50cd25",
-      "name": "Call 'add-options' Drain And Overflow"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        12336,
-        -48
-      ],
-      "id": "07cfd0ba-e7c4-4df5-bc0e-c3fb76c1d839",
-      "name": "Call 'add-options' Island Tub Drain"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {},
-          "matchingColumns": [],
-          "schema": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": true
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        11216,
-        -48
-      ],
-      "id": "7c2eb1c2-91a1-4499-8a69-e1cb352bfd3c",
-      "name": "Call 'add-options' Cushion"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        10096,
-        -48
-      ],
-      "id": "ccb9844d-dd28-474b-ba2f-568a3c19b07c",
-      "name": "Call 'add-options' Deck"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        8976,
-        -48
-      ],
-      "id": "5ffc7175-9bf9-45cc-833d-f163c58439f6",
-      "name": "Call 'add-options' Feet"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        7856,
-        -48
-      ],
-      "id": "feb1b4cf-c658-41fb-b8c8-f9ee0585e2c4",
-      "name": "Call 'add-options' Skirt"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        6736,
-        -48
-      ],
-      "id": "4a621dbe-cb4d-4117-b123-768c441475cf",
-      "name": "Call 'add-options' Tile Flange"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        5616,
-        -112
-      ],
-      "id": "ceaf938d-58a0-4870-98f9-7b1d2ae967ac",
-      "name": "Call 'add-options' Combo Feet & Armrest"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        5616,
-        176
-      ],
-      "id": "277fd49b-1b32-4991-ab95-55a148a7a816",
-      "name": "Call 'add-options' Grab Bars"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        4048,
-        -112
-      ],
-      "id": "925e6457-a8e7-4863-aaf2-2327fc222913",
-      "name": "Call 'add-options' BU Control"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        3152,
-        -112
-      ],
-      "id": "7ee2c601-d1ec-4600-9f8d-5ad8538fb1a2",
-      "name": "Call 'add-options' MIA Control"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        2032,
-        -48
-      ],
-      "id": "6026a8a6-d51f-4454-a3d3-41904526dd4e",
-      "name": "Call 'add-options' Chromo"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {},
-          "matchingColumns": [],
-          "schema": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": true
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        912,
-        -48
-      ],
-      "id": "32bc26a9-93ed-4bdc-b477-ad880db432f6",
-      "name": "Call 'add-options' Aroma"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        -208,
-        224
-      ],
-      "id": "6d486ac1-c7ac-49ea-aa65-966a2ae4f14a",
-      "name": "Call 'add-options' Second WTS"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        -208,
-        -160
-      ],
-      "id": "620f5b5e-5bad-4583-9403-d788c9407f77",
-      "name": "Call 'add-options' Second HBR"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {}
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        -1104,
-        144
-      ],
-      "id": "29a8e0dd-c79b-42fc-8aea-6bacdbeb4bbd",
-      "name": "Call 'add-options' First WTS"
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "TC6wSHtRmkGN446D",
-          "mode": "list",
-          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
-          "cachedResultName": "add-options"
-        },
-        "workflowInputs": {
-          "mappingMode": "defineBelow",
-          "value": {},
-          "matchingColumns": [],
-          "schema": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": true
-        },
-        "options": {
-          "waitForSubWorkflow": true
-        }
-      },
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.3,
-      "position": [
-        -1104,
-        -96
-      ],
-      "id": "bbc0ad3d-4d46-448e-a6f1-5f3364e58134",
-      "name": "Call 'add-options' HBR"
     },
     {
       "parameters": {
@@ -2388,37 +1850,37 @@
       "type": "n8n-nodes-base.formTrigger",
       "typeVersion": 2.3,
       "position": [
-        -7136,
-        32
+        -5808,
+        -1040
       ],
-      "id": "615262aa-5ca4-4628-b3b8-a96dbc28ca81",
+      "id": "11ff31be-5f71-416f-a276-f623380f6c9c",
       "name": "Customer Order Form",
-      "webhookId": "a35b0cad-1d7c-439f-a1e5-744311054b2a"
+      "webhookId": "2b3df582-959f-416d-b98c-2fed161a980e"
     },
     {
       "parameters": {
-        "jsCode": "const { fetch } = require('undici');\n\nvar response = await fetch('http://localhost:7379/get/products')\nresponse = await response.json()\nconst products = JSON.parse(response.get)\n\nreturn products"
+        "jsCode": "const { fetch } = require('undici')\n\nvar response = await fetch('http://localhost:7379/get/products')\nresponse = await response.json()\nconst products = JSON.parse(response.get)\n\nreturn products"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -6912,
-        32
+        -5584,
+        -1040
       ],
-      "id": "71b58256-bbd5-4c40-a0eb-e9621d1deab5",
+      "id": "a9c2bfb3-712e-4514-a674-5ae403ed79d7",
       "name": "Products Sheet Collection"
     },
     {
       "parameters": {
-        "jsCode": "const { fetch } = require('undici');\n\nvar response = await fetch('http://localhost:7379/get/options')\nresponse = await response.json()\nvar options = JSON.parse(response.get)\n\noptions = options.filter((option) => {\n  return option[\"PRODUCT SKU\"] === $('product').first().json.configuration.base.Product_SKU\n})\n\nreturn options"
+        "jsCode": "const { fetch } = require('undici')\n\nvar response = await fetch('http://localhost:7379/get/options')\nresponse = await response.json()\nvar options = JSON.parse(response.get)\n\noptions = options.filter((option) => {\n  return option[\"PRODUCT SKU\"] === $('product').first().json.configuration.base.Product_SKU\n})\n\nreturn options"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2320,
-        32
+        -992,
+        -1040
       ],
-      "id": "3b62d4b5-1955-4a6f-a060-e82966008d46",
+      "id": "0d4c2ce9-800c-4a73-949b-01a3b6e6551a",
       "name": "Options Sheet Collection"
     }
   ],
@@ -2625,7 +2087,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Second HBR",
+            "node": "Aroma",
             "type": "main",
             "index": 0
           }
@@ -2636,7 +2098,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' HBR",
+            "node": "If Second HBR",
             "type": "main",
             "index": 0
           }
@@ -2669,7 +2131,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' First WTS",
+            "node": "If Second WTS",
             "type": "main",
             "index": 0
           }
@@ -2709,7 +2171,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Second WTS",
+            "node": "Aroma",
             "type": "main",
             "index": 0
           }
@@ -2760,7 +2222,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Aroma",
+            "node": "Chromo",
             "type": "main",
             "index": 0
           }
@@ -2811,7 +2273,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Chromo",
+            "node": "Control Switch",
             "type": "main",
             "index": 0
           }
@@ -2880,7 +2342,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' MIA Control",
+            "node": "BU-Touch Control",
             "type": "main",
             "index": 0
           }
@@ -2913,7 +2375,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' BU Control",
+            "node": "Combo Feet & Armrest",
             "type": "main",
             "index": 0
           }
@@ -2953,7 +2415,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Grab Bars",
+            "node": "Tile Flange",
             "type": "main",
             "index": 0
           }
@@ -3015,7 +2477,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Tile Flange",
+            "node": "Skirt",
             "type": "main",
             "index": 0
           }
@@ -3084,7 +2546,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Skirt",
+            "node": "Feet",
             "type": "main",
             "index": 0
           }
@@ -3135,7 +2597,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Feet",
+            "node": "Deck",
             "type": "main",
             "index": 0
           }
@@ -3146,7 +2608,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Deck",
+            "node": "Cushion",
             "type": "main",
             "index": 0
           }
@@ -3237,7 +2699,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Cushion",
+            "node": "Island Tub Drain",
             "type": "main",
             "index": 0
           }
@@ -3288,7 +2750,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Island Tub Drain",
+            "node": "Drain And Overflow Material",
             "type": "main",
             "index": 0
           }
@@ -3310,7 +2772,7 @@
       "main": [
         [
           {
-            "node": "HTTP Request",
+            "node": "Form",
             "type": "main",
             "index": 0
           }
@@ -3361,18 +2823,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Combo Feet & Armrest",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Get Configuration": {
-      "main": [
-        [
-          {
-            "node": "Price",
+            "node": "Tile Flange",
             "type": "main",
             "index": 0
           }
@@ -3427,7 +2878,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Drain And Overflow",
+            "node": "Early Motor Shipment",
             "type": "main",
             "index": 0
           }
@@ -3485,7 +2936,7 @@
       "main": [
         [
           {
-            "node": "Call 'add-options' Early Motor Shipment",
+            "node": "Price",
             "type": "main",
             "index": 0
           }
@@ -3530,215 +2981,6 @@
         [
           {
             "node": "Drain And Overflow",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTTP Request": {
-      "main": [
-        [
-          {
-            "node": "Form",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Early Motor Shipment": {
-      "main": [
-        [
-          {
-            "node": "Get Configuration",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Drain And Overflow": {
-      "main": [
-        [
-          {
-            "node": "Early Motor Shipment",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Island Tub Drain": {
-      "main": [
-        [
-          {
-            "node": "Drain And Overflow Material",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Cushion": {
-      "main": [
-        [
-          {
-            "node": "Island Tub Drain",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Deck": {
-      "main": [
-        [
-          {
-            "node": "Cushion",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Feet": {
-      "main": [
-        [
-          {
-            "node": "Deck",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Skirt": {
-      "main": [
-        [
-          {
-            "node": "Feet",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Tile Flange": {
-      "main": [
-        [
-          {
-            "node": "Skirt",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Combo Feet & Armrest": {
-      "main": [
-        [
-          {
-            "node": "Tile Flange",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Grab Bars": {
-      "main": [
-        [
-          {
-            "node": "Tile Flange",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' BU Control": {
-      "main": [
-        [
-          {
-            "node": "Combo Feet & Armrest",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' MIA Control": {
-      "main": [
-        [
-          {
-            "node": "BU-Touch Control",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Chromo": {
-      "main": [
-        [
-          {
-            "node": "Control Switch",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Aroma": {
-      "main": [
-        [
-          {
-            "node": "Chromo",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Second WTS": {
-      "main": [
-        [
-          {
-            "node": "Aroma",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' Second HBR": {
-      "main": [
-        [
-          {
-            "node": "Aroma",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' First WTS": {
-      "main": [
-        [
-          {
-            "node": "If Second WTS",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Call 'add-options' HBR": {
-      "main": [
-        [
-          {
-            "node": "If Second HBR",
             "type": "main",
             "index": 0
           }
