@@ -1,0 +1,3843 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -6480,
+        32
+      ],
+      "id": "c777a1b6-6301-4cca-9165-700603eeb95f",
+      "name": "Collection Form",
+      "webhookId": "895adc30-15c3-4496-864e-d765bd95cee1"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -6032,
+        32
+      ],
+      "id": "34194eca-756e-4b95-bc18-3d0da01674d5",
+      "name": "Installation Type Form",
+      "webhookId": "895adc30-15c3-4496-864e-d765bd95cee1"
+    },
+    {
+      "parameters": {
+        "jsCode": "let collections = []\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  collections.push(product.json.Collection)\n})\n\ncollections = [...new Set(collections)].sort()\n\nconst dropdown = {\n  \"fieldLabel\": \"Collection\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": collections.map((option) => {\n      return { option }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ] }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -6688,
+        32
+      ],
+      "id": "a6088b84-bdcf-4f16-8598-a75500fecb22",
+      "name": "Collection List"
+    },
+    {
+      "parameters": {
+        "jsCode": "let installationTypes = []\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (product.json.Collection === $(\"Collection Form\").first().json.Collection) {\n    installationTypes.push(product.json.Installation_Type)\n  }\n})\n\ninstallationTypes = [...new Set(installationTypes)].sort()\n\nconst dropdown = {\n  \"fieldLabel\": \"Installation Type\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": installationTypes.map((option) => {\n      return { option }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ] }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -6256,
+        32
+      ],
+      "id": "8549e806-5134-49ab-b370-a19f3bb2b97f",
+      "name": "Installation Type List"
+    },
+    {
+      "parameters": {
+        "jsCode": "let models = []\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"]\n  ) {\n    models.push(product.json.Model)\n  }\n})\n\nmodels = [...new Set(models)].sort()\n\nconst dropdown = {\n  \"fieldLabel\": \"Model\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": models.map((option) => {\n      return { option }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ] }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -5808,
+        32
+      ],
+      "id": "42d67490-9491-4ad2-a408-1935b1153dd2",
+      "name": "Model List"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -5584,
+        32
+      ],
+      "id": "e8b52c17-15b3-4941-b04b-8a674cc66707",
+      "name": "Model Form",
+      "webhookId": "895adc30-15c3-4496-864e-d765bd95cee1"
+    },
+    {
+      "parameters": {
+        "jsCode": "let dimensions = []\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model\n  ) {\n    dimensions.push(String(product.json.LW))\n  }\n})\n\ndimensions = [...new Set(dimensions)].sort()\n\nconst dropdown = {\n  \"fieldLabel\": \"Dimension\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": dimensions.map((option) => {\n      return { option }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ] }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -5360,
+        32
+      ],
+      "id": "19dab3ee-1cd0-4990-adb0-5dcef1ab1c30",
+      "name": "Size List"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -5136,
+        32
+      ],
+      "id": "8549dbfb-b519-440f-9423-474c11218efb",
+      "name": "Dimension Form",
+      "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09",
+      "notesInFlow": false
+    },
+    {
+      "parameters": {
+        "jsCode": "let deckFeatures = []\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension\n  ) {\n    deckFeatures.push(product.json.Deck_Feature)\n  }\n})\n\ndeckFeatures = [...new Set(deckFeatures)].sort()\n\nconst dropdown = {\n  \"fieldLabel\": \"Deck Feature\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": deckFeatures.map((option) => {\n      return { option }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ] }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -4912,
+        32
+      ],
+      "id": "1e181313-c905-4c15-ba8c-12f8a72cc303",
+      "name": "Deck Feature List"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -4688,
+        32
+      ],
+      "id": "c5e9b7d9-b036-4488-a196-b6365c6b6d64",
+      "name": "Deck Feature Form",
+      "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
+    },
+    {
+      "parameters": {
+        "jsCode": "let handings = []\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"]\n  ) {\n    handings.push(product.json.Handing)\n  }\n})\n\nhandings = [...new Set(handings)].sort()\n\nconst dropdown = {\n  \"fieldLabel\": \"Handing\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": handings.map((option) => {\n      return { option }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ] }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -4464,
+        32
+      ],
+      "id": "1b242448-fcd3-4042-b2c6-89de638d37f4",
+      "name": "Handing List"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -4240,
+        32
+      ],
+      "id": "cdf4381f-b687-4d5b-a059-718468696b63",
+      "name": "Handing Form",
+      "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
+    },
+    {
+      "parameters": {
+        "jsCode": "let colors = []\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing\n  ) {\n    colors.push(product.json.Color)\n  }\n})\n\ncolors = [...new Set(colors)].sort()\n\nconst dropdown = {\n  \"fieldLabel\": \"Color\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": colors.map((option) => {\n      return { option }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ] }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -4016,
+        32
+      ],
+      "id": "b944eb45-38b1-4111-ac40-e746a461257c",
+      "name": "Color List"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -3792,
+        32
+      ],
+      "id": "1b196b2a-95c1-40f7-a2f3-6827772de3e9",
+      "name": "Color Form",
+      "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\nlet prices = {}\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color\n  ) {\n    options.push(product.json.Surface_Finish)\n    console.log(product.json.Surface_Finish)\n    prices[product.json.Surface_Finish] = product.json.Surface_Finish_Price\n  }\n})\n\nconsole.log(prices)\noptions = [...new Set(options)].sort()\n\nconst dropdown = {\n  \"fieldLabel\": \"Surface Finish\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option}, +$${prices[option]}` }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ] }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3568,
+        32
+      ],
+      "id": "495aba01-33b7-4e9f-9f12-fd4a444857ee",
+      "name": "Finish List"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -3344,
+        32
+      ],
+      "id": "4d5362ef-0fe1-413a-bb03-c28b142685b6",
+      "name": "Surface Finish Form",
+      "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
+    },
+    {
+      "parameters": {
+        "jsCode": "const { fetch } = require('undici');\n\nfunction uniqueKey() {\n  const now = new Date();\n  const date = now.toISOString().slice(0, 10); // 2026-03-01\n  const ms = now % 86400000;\n  const rand = String(Math.floor(Math.random() * 1000)).padStart(3, '0');\n  return `${date}_${ms}_${rand}`;\n}\nconst key = uniqueKey()\n\nlet configuration\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color &&\n    product.json.Surface_Finish === $(\"Surface Finish Form\").first().json[\"Surface Finish\"].split(',')[0] &&\n    product.json.Line === $(\"Line Form\").first().json[\"Line\"]\n  ) {\n    configuration = { base: product.json, co_num: $(\"Customer Order Form\").first().json['Customer Order'], options: [] }\n  }\n})\n\nconst configurationJSON = JSON.stringify(configuration)\n\nawait fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(configurationJSON)}`);\n\nreturn { configuration, configurationJSON, key }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2672,
+        32
+      ],
+      "id": "4a2135a4-090f-45f2-8a91-f52f3cfadc6a",
+      "name": "product"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('HBR').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -656,
+        -160
+      ],
+      "id": "1fb220be-58d2-49b7-8850-8347827f97d6",
+      "name": "TMU Second HBR Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = $('HBR').first().json.secondHeatingZone\nif ($(\"TMU Second HBR Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -432,
+        -160
+      ],
+      "id": "f112f057-c906-45da-b0b2-00ca9f3c7494",
+      "name": "Second HBR"
+    },
+    {
+      "parameters": {
+        "jsCode": "let secondHeatingZone = []\nlet options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMMOD00T-02 2nd not available\t\t\t\t\t\t\t\t\t\t\t\n// BAMSRB00T-02 2nd included\n// BSCMOF00T-01 2nd + price\n// Product_SKU = \"BSCMOF00T-01\"\n$(\"Options Sheet Collection\").all().forEach((option) => {\n  if (\n    option.json[\"PRODUCT SKU\"] === Product_SKU &&\n    option.json[\"FEATURE\"] == \"WTS\"\n  ) {\n    if (option.json[\"Option Price\"] > 0) {\n      secondHeatingZone.push(option.json)\n    } else {\n      options.push(option.json)\n    }\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Second Heated Backrest\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": secondHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], secondHeatingZone, options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1328,
+        -96
+      ],
+      "id": "6212f0c0-e57e-46af-a578-3cf3ff5d82c5",
+      "name": "HBR",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "jsCode": "let firstHeatingZone = []\nlet secondHeatingZone = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMBRA0LN-01 2nd not available\n// BAMVOFN0N-01 1st & 2nd + price\n// Product_SKU = \"BAMBRA0LN-01\"\n$(\"Options Sheet Collection\").all().forEach((option) => {\n  if (\n    option.json[\"PRODUCT SKU\"] === Product_SKU &&\n    option.json[\"FEATURE\"] == \"WTS\"\n  ) {\n    if (option.json[\"PRODUCT_OPTION_NAME\"] === '2ND WARMTOUCHSHELL') {\n      secondHeatingZone.push(option.json)\n    }\n    else {\n      firstHeatingZone.push(option.json)\n    }\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Warm TouchShell (WTS)\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": firstHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nconst secondWTSdropdown = {\n  \"fieldLabel\": \"Second Warm TouchShell (WTS)\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": secondHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { firstHeatingZone, form: [ dropdown ], secondHeatingZone, id: $(\"Insert Product\").first().json.id, secondWTSform: [ secondWTSdropdown ] }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1776,
+        144
+      ],
+      "id": "6f572b5b-6b79-4ec3-9bf4-8c6d33c0b628",
+      "name": "WTS",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('WTS').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -1552,
+        144
+      ],
+      "id": "c947472c-ac44-4ec2-ba45-d7151099fd29",
+      "name": "Tub First WTS Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = $('WTS').first().json.firstHeatingZone\nif ($(\"Tub First WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1328,
+        144
+      ],
+      "id": "28b3354f-8f83-44b7-9abd-4ab3e1657721",
+      "name": "First WTS"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $('HBR').first().json.secondHeatingZone }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -880,
+        -96
+      ],
+      "id": "783d2aa6-a5c1-47d7-817d-0fa93f916f4b",
+      "name": "If Second HBR"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('WTS').first().json.secondWTSform) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -656,
+        224
+      ],
+      "id": "120a14c4-dae2-4eb8-8790-93a35e5bf548",
+      "name": "Tub Second WTS Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = $('WTS').first().json.secondHeatingZone\nif ($(\"Tub Second WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -432,
+        224
+      ],
+      "id": "ba632e3e-f2c0-467d-9ccb-7a8a4aafc23a",
+      "name": "Second WTS"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMMOD00T-02 No aromatherapy available\t\t\n// BOOBRI00N-01 Both aromatherapy available\n// BSCMOF00T-01 Only Aroma Cloud available\n// BSCMOF00T-01 Only Aromaflow available\n// Product_SKU = \"BOOBRI00N-01\"\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"AROMATHERAPY\"\n  ) {\n      options.push(item.json)\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Aromatherapy\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        16,
+        32
+      ],
+      "id": "f4ad21fd-cdb6-43c2-8ab8-cb285f047179",
+      "name": "Aroma"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $input.first().json.options }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        240,
+        32
+      ],
+      "id": "59ce9d5f-11f2-4956-b45e-bc89b28bde10",
+      "name": "If Aroma"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Aroma').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        464,
+        -48
+      ],
+      "id": "dff8f463-342a-4e48-81e0-bbc3adea7638",
+      "name": "Aroma Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Aroma').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Aroma Form\").first().json[\"Aromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        688,
+        -48
+      ],
+      "id": "a50d7d05-ff52-4698-a8c5-7c319fac66ae",
+      "name": "Aroma Selection"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BOS2RF00F-01 No chromatherapy available\n// BOOBRI00N-01 Chromatherapy available\n// Product_SKU = \"BOOBRI00N-01\"\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"CHROMATHERAPY\"\n  ) {\n      options.push(item.json)\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Chromatherapy\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1136,
+        32
+      ],
+      "id": "b10e9c67-8233-405e-ae3f-b1fac1fcdc6c",
+      "name": "Chromo"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $input.first().json.options }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1360,
+        32
+      ],
+      "id": "e6d8d8e8-009b-4533-8357-a481c5d4c3c3",
+      "name": "If Chromo"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Chromo').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        1584,
+        -48
+      ],
+      "id": "91c73340-5d2b-4a32-929c-938af89c3751",
+      "name": "Chromo Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Chromo').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Chromo Form\").first().json[\"Chromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1808,
+        -48
+      ],
+      "id": "a4bac659-b01b-43e7-ab3c-ed2602616cdf",
+      "name": "Chromo Selection"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $(\"Line Form\").first().json.Line }}",
+                    "rightValue": "TMU",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "7ff69289-d325-4293-8cbe-91ca04300086"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "TMU"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "beab3113-a1e5-4a54-90e6-9e7832d7dc39",
+                    "leftValue": "={{ $(\"Line Form\").first().json.Line }}",
+                    "rightValue": "TUB",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "TUB"
+            }
+          ]
+        },
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        -2000,
+        32
+      ],
+      "id": "b04b21fc-a1c6-40ef-a5bf-0685fd7aea62",
+      "name": "Line Switch"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $(\"Line Form\").first().json.Line }}",
+                    "rightValue": "TMU",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "7ff69289-d325-4293-8cbe-91ca04300086"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "TMU"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "beab3113-a1e5-4a54-90e6-9e7832d7dc39",
+                    "leftValue": "={{ $(\"Line Form\").first().json.Line }}",
+                    "rightValue": "TUB",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "TUB"
+            }
+          ]
+        },
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        2256,
+        -48
+      ],
+      "id": "93dfadff-583e-4e99-9eb4-82fde519bdeb",
+      "name": "Control Switch"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"MIA CONTROL\"\n  ) {\n      options.push(item.json)\n\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"MIA Control\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2480,
+        -112
+      ],
+      "id": "53af68a9-86a7-4d84-93cd-bb819afad114",
+      "name": "MIA Control"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('MIA Control').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        2704,
+        -112
+      ],
+      "id": "adf52908-c3b1-49ad-828c-2e4c2e9f7cab",
+      "name": "MIA Control Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('MIA Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"MIA Control Form\").first().json[\"MIA Control\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2928,
+        -112
+      ],
+      "id": "ca80b8be-b14d-4e89-992d-157814ecf529",
+      "name": "MIA Control Selection"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"VIRTUAL CONTROL APP\"\n  ) {\n      options.push(item.json)\n\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"BU-Touch Control\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3376,
+        -112
+      ],
+      "id": "5d98d784-ec75-4d3b-91c2-b7f47284dd7e",
+      "name": "BU-Touch Control"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('BU-Touch Control').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        3600,
+        -112
+      ],
+      "id": "b43ab2ea-186d-4f55-9b62-00b9964d4f5f",
+      "name": "BU-Touch Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('BU-Touch Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"BU-Touch Form\").first().json[\"BU-Touch Control\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3824,
+        -112
+      ],
+      "id": "dde4e328-af68-4de6-ad62-b2dc3fe69dea",
+      "name": "BU-Touch Control Selection"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"GRAB_BAR\"\n  ) {\n      options.push(item.json)\n\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Grab Bars\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4720,
+        96
+      ],
+      "id": "93b045bc-49a4-45f8-9ccf-9812faef6253",
+      "name": "Grab Bars"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $input.first().json.options }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        4944,
+        96
+      ],
+      "id": "10f69dd3-9465-4586-abfe-e2d87ff39c25",
+      "name": "If Grab Bars"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Grab Bars').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Grab Bars Form\").first().json[\"Grab Bars\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5392,
+        176
+      ],
+      "id": "ced7825e-a0a9-48e2-9891-0a5b40697aa6",
+      "name": "Grab Bars Selection"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Grab Bars').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        5168,
+        176
+      ],
+      "id": "18fa772e-8744-400e-a5b7-4bf967445c4a",
+      "name": "Grab Bars Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"TILE FLANGE\"\n  ) {\n      options.push(item.json)\n\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Tile Flange\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5840,
+        32
+      ],
+      "id": "47a56cab-c4ad-4246-a678-8b79ce0b570c",
+      "name": "Tile Flange"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $input.first().json.options }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        6064,
+        32
+      ],
+      "id": "4c6648e5-690a-4564-91b7-862f5c8c1d9a",
+      "name": "If Tile Flange"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Tile Flange').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        6288,
+        -48
+      ],
+      "id": "62827855-8c83-4486-a51b-e5bf12d1973a",
+      "name": "Tile Flange Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Tile Flange').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Tile Flange Form\").first().json[\"Tile Flange\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        6512,
+        -48
+      ],
+      "id": "96c59846-7b1d-4e91-880e-fd2421111a4c",
+      "name": "Tile Flange Selection"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $('WTS').first().json.secondHeatingZone }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "00450b5d-bc5f-45ac-9cc1-c80aefcecfd2",
+              "leftValue": "={{ console.log(222) && 11 }}",
+              "rightValue": "dude",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -880,
+        144
+      ],
+      "id": "550c1df2-aba5-49a0-8424-aff4e4bf4543",
+      "name": "If Second WTS",
+      "notesInFlow": false,
+      "alwaysOutputData": false,
+      "retryOnFail": false
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"SKIRT\"\n  ) {\n      options.push(item.json)\n\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Skirt\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        6960,
+        32
+      ],
+      "id": "47660bb3-7c56-4394-b36b-605506b058e0",
+      "name": "Skirt"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $input.first().json.options }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        7184,
+        32
+      ],
+      "id": "ede1dea0-0e6b-4369-a9b2-c8d40d418054",
+      "name": "If Skirt"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Skirt').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        7408,
+        -48
+      ],
+      "id": "d480766a-0ab9-4140-95c5-8aa58bd6c9c9",
+      "name": "Skirt Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Skirt').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Skirt Form\").first().json[\"Skirt\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        7632,
+        -48
+      ],
+      "id": "5f5cba25-4259-4624-bd6e-b3da27bae9c6",
+      "name": "Skirt Selection"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"FEET\"\n  ) {\n      options.push(item.json)\n\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Feet\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        8080,
+        32
+      ],
+      "id": "b0df138c-d6d1-4859-85f0-6d396f28295b",
+      "name": "Feet"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $input.first().json.options }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "0ec18898-82e9-4772-9093-d4abd717b7ac",
+              "leftValue": "={{ $('Combo Feet & Armrest').first().json.options.length > 0 && $('Combo Feet & Armrest Selection').first().json.options.length === 0 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        8304,
+        32
+      ],
+      "id": "880280b3-3385-4a3f-91bd-77afdc890efb",
+      "name": "If Feet"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Feet').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        8528,
+        -48
+      ],
+      "id": "efc319b4-c6f2-4926-9c4b-2fd6579ab87b",
+      "name": "Feet Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Feet').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Feet Form\").first().json[\"Feet\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        8752,
+        -48
+      ],
+      "id": "f4beb78e-3bac-484a-8867-08b23a8ba819",
+      "name": "Feet Selection"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Deck').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Deck Form\").first().json[\"Deck\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        9872,
+        -48
+      ],
+      "id": "72dce562-56f9-4e42-b8ba-02e36eaa8979",
+      "name": "Deck Selection"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Deck').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        9648,
+        -48
+      ],
+      "id": "1cb5f1b5-092b-4962-bf75-1c1a8973342d",
+      "name": "Deck Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $input.first().json.options }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        9424,
+        32
+      ],
+      "id": "9783aecd-e1b1-4f65-838d-9fbca8e384c9",
+      "name": "If Deck"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"DECK\"\n  ) {\n      options.push(item.json)\n\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Deck\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        9200,
+        32
+      ],
+      "id": "73242fbf-9916-4a22-9caf-15de781d16f1",
+      "name": "Deck"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"CUSHION\"\n  ) {\n      options.push(item.json)\n\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Cushion\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        10320,
+        32
+      ],
+      "id": "40a6c872-99ce-4246-a77b-9c079b2923ed",
+      "name": "Cushion"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $input.first().json.options }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        10544,
+        32
+      ],
+      "id": "57b3aa20-5514-4609-8289-44d3203bae87",
+      "name": "If Cushion"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Cushion').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        10768,
+        -48
+      ],
+      "id": "c79c5e4f-0905-42f2-bdc2-0e6f144bfd2a",
+      "name": "Cushion Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Cushion').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Cushion Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        10992,
+        -48
+      ],
+      "id": "b3aae13f-320c-4680-9b25-ed69de89b00b",
+      "name": "Cushion Selection"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"ISLAND TUB DRAIN\"\n  ) {\n      options.push(item.json)\n\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Island Tub Drain\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11440,
+        32
+      ],
+      "id": "d00a7b33-953a-44bb-bc0e-f4507d4f7eb7",
+      "name": "Island Tub Drain"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $input.first().json.options }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        11664,
+        32
+      ],
+      "id": "5642ec22-da72-4bf2-bc4d-c4b028cb6f50",
+      "name": "If Island Tub Drain"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Island Tub Drain').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        11888,
+        -48
+      ],
+      "id": "80bcd7dc-b48a-4771-94c7-af3ae74da46e",
+      "name": "Island Tub Drain Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Island Tub Drain').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Island Tub Drain Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12112,
+        -48
+      ],
+      "id": "88a892fc-6cbe-4889-b19d-563df5201498",
+      "name": "Island Tub Drain Selection"
+    },
+    {
+      "parameters": {
+        "jsCode": "const configuration = JSON.parse($input.first().json.options)\n\nconst options = configuration.options.filter((option) => {\n  return option?.TYPE === ''\n})\n\nconst instructions = configuration.options.filter((option) => {\n  return option?.TYPE === 'INSTRUCTION'\n})\n\nlet price = configuration.base.List_Price+configuration.base.Surface_Finish_Price\n\nfunction generateOptionsHTML(options) {\n  return options.map(option => {\n    price = price + option['Option Price']\n    return `  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>${option.PRODUCT_OPTION_NAME}</div>\n    <div>$${option['Option Price']}</div>\n  </div>`;\n  }).join('\\n');\n}\n\nconst html = `\n<div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 1em;\">\n    <div><strong>Configuration</strong></div>\n    <div>$${configuration.base.List_Price+configuration.base.Surface_Finish_Price}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between\">\n    <div>Model: ${configuration.base.Product_Name} (${configuration.base.Product_SKU})</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Color: ${configuration.base.Color}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Deck: ${configuration.base.Deck_Feature}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Handing: ${configuration.base.Handing}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Installation Type: ${configuration.base.Installation_Type}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Line: ${configuration.base.Line}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Surface Finish: ${configuration.base.Surface_Finish}</div>\n    <div>$${configuration.base.Surface_Finish_Price}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-top: 2em; margin-bottom: 1em;\">\n    <div><strong>Options</strong></div>\n  </div>\n${generateOptionsHTML(options)}\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-top: 2em; margin-bottom: 1em;\">\n    <div><strong>Instructions</strong></div>\n  </div>\n${generateOptionsHTML(instructions)}\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-top: 2em; margin-bottom: 1em;\">\n    <div><strong>Product Price</strong></div>\n    <div><strong>$${price}</strong></div>\n  </div>\n</div>`\n\nreturn { html }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        15472,
+        -48
+      ],
+      "id": "bf99c408-40e1-47fc-8000-3d12bc5511f8",
+      "name": "Price"
+    },
+    {
+      "parameters": {
+        "options": {
+          "formDescription": "={{ $input.first().json.html }}",
+          "buttonLabel": "Submit C"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        15760,
+        -48
+      ],
+      "id": "5dbe0b1d-159b-4d10-8668-79c76ead29da",
+      "name": "Price Form",
+      "webhookId": "6bfe5117-80eb-4982-a34b-ab08cdafcf9c"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Models: Scala\nlet options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$(\"Options Sheet Collection\").all().forEach((item) => {\n  if (\n    item.json[\"PRODUCT SKU\"] === Product_SKU &&\n    item.json[\"FEATURE\"] == \"ARMRESTS\"\n  ) {\n      options.push(item.json)\n\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Combo Feet & Armrest\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4272,
+        32
+      ],
+      "id": "d6fd098d-f9ba-444e-8d94-f016e29dfe5e",
+      "name": "Combo Feet & Armrest"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8887607f-67c5-415f-9ff2-6d6ed05c5372",
+              "leftValue": "={{ $input.first().json.options }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        4496,
+        32
+      ],
+      "id": "4812c50a-9c74-45be-b04f-4574db141e07",
+      "name": "If Combo Feet & Armrest"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Combo Feet & Armrest').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        5168,
+        -112
+      ],
+      "id": "f4bf2e23-da01-452e-b446-64fc56a67e90",
+      "name": "Combo Feet & Armrest Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Combo Feet & Armrest').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Combo Feet & Armrest Form\").first().json[\"Combo Feet & Armrest\"]) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5392,
+        -112
+      ],
+      "id": "1725bbe7-2b1a-4498-91d8-d98b07af13ca",
+      "name": "Combo Feet & Armrest Selection"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "92JHN82usfnNxf1f",
+          "mode": "list",
+          "cachedResultName": "configurations",
+          "cachedResultUrl": "/projects/e1Ye65DfJRS4YYu9/datatables/92JHN82usfnNxf1f"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyValue": "={{ $(\"Insert Product\").first().json.id }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        15248,
+        -48
+      ],
+      "id": "4273e59b-3cda-4171-9478-83a811e14a1b",
+      "name": "Get Configuration"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = ['Brass', 'PVC', 'None']\n\nconst dropdown = {\n  \"fieldLabel\": \"Drain And Overflow\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12560,
+        32
+      ],
+      "id": "c677e6e7-9fce-46e5-bf61-caf034f5fca6",
+      "name": "Drain And Overflow Material"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Drain And Overflow Material').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        12784,
+        32
+      ],
+      "id": "ffdf1b2d-7a60-4830-9bff-dc0517259397",
+      "name": "Drain And Overflow Material Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n$input.all().forEach((item) => {\n  if (\n    item.json[\"Product_SKU\"] === Product_SKU\n  ) {\n      options.push(item.json)\n  }\n})\n\nconst dropdown = {\n  \"fieldLabel\": \"Drain And Overflow\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13456,
+        -112
+      ],
+      "id": "4fad2fa7-575e-4316-a861-6d8c4ad52044",
+      "name": "Drain And Overflow"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Drain And Overflow').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        13680,
+        -112
+      ],
+      "id": "fc0b82dd-cf67-4710-a119-360464b2fef3",
+      "name": "Drain And Overflow Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nif ($('Drain And Overflow Material Form').first().json['Drain And Overflow']) {\n  options .push(    \n    {\n      \"OPTION SKU\": \"BOVER00-00\",\n      \"PRODUCT_OPTION_NAME\": \"NO DRAIN\",\n      \"Option Price\": 0,\n    })\n} else {\n  for (const item of $('Drain And Overflow').first().json.options) {\n    if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Drain And Overflow Form\").first().json[\"Drain And Overflow\"]) {\n      options.push(item)\n    }\n  }  \n}\n\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13904,
+        -48
+      ],
+      "id": "d5e1b4b4-8893-4617-9a24-c8cb02c321d0",
+      "name": "Drain And Overflow Selection"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Drain And Overflow Material Form').first().json['Drain And Overflow'] }}",
+                    "rightValue": "Brass",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "05ba5067-cb14-4844-ada6-9745e2765e55"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Brass"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "b403747f-8c9a-4dea-b1eb-348e543b5090",
+                    "leftValue": "={{ $('Drain And Overflow Material Form').first().json['Drain And Overflow'] }}",
+                    "rightValue": "PVC",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "PVC"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2a2e0c5c-ce0f-4710-9886-6a3a3a096fe6",
+                    "leftValue": "={{ $('Drain And Overflow Material Form').first().json['Drain And Overflow'] }}",
+                    "rightValue": "None",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "None"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        13008,
+        16
+      ],
+      "id": "a5a59d9b-6d83-4b4d-bc8a-f5fa91fdceec",
+      "name": "Drain And Overflow Material Form Switch"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = [\n  { \"PRODUCT_OPTION_NAME\": \"EARLY MOTOR SHIPMENT\", \"Option Price\": 0, \"TYPE\": \"INSTRUCTION\", \"OPTION SKU\": \"EAMOEAD9E1\", },\n  { \"PRODUCT_OPTION_NAME\": \"NONE\", \"Option Price\": 0, \"TYPE\": \"INSTRUCTION\", \"OPTION SKU\": \"EAMONOD9E1\", },\n]\n\nconst dropdown = {\n  \"fieldLabel\": \"Early Motor Shipment\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ], options }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        14352,
+        -48
+      ],
+      "id": "111e6281-6374-463f-bd8a-018345d43427",
+      "name": "Early Motor Shipment"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($('Early Motor Shipment').first().json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        14576,
+        -48
+      ],
+      "id": "4146cc9f-b86f-41bc-8e35-6ffd189ddbeb",
+      "name": "Early Motor Shipment Form",
+      "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\nfor (const item of $('Early Motor Shipment').first().json.options) {\n  if (\n    `${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] &&\n    $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] === `EARLY MOTOR SHIPMENT, +$${item[\"Option Price\"]}`\n     ) {\n    options.push(item)\n  }\n}\n\nreturn { options, id: $(\"Insert Product\").first().json.id }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        14800,
+        -48
+      ],
+      "id": "8083b725-37e0-4b4e-b050-4699a7303eac",
+      "name": "Early Motor Shipment Selection"
+    },
+    {
+      "parameters": {
+        "defineForm": "json",
+        "jsonOutput": "={{ JSON.stringify($json.form) }}",
+        "options": {
+          "buttonLabel": "Submit"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -2896,
+        32
+      ],
+      "id": "9117654a-c77e-4766-8323-166d12bf0959",
+      "name": "Line Form",
+      "webhookId": "6ecb2fe7-e6a4-46dc-8846-d39de88f8d6b"
+    },
+    {
+      "parameters": {
+        "jsCode": "let options = []\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color &&\n    product.json.Surface_Finish === $(\"Surface Finish Form\").first().json[\"Surface Finish\"].split(',')[0]\n  ) {\n    options.push(product.json.Line)\n  }\n})\n\noptions = [...new Set(options)].sort()\n\nconst dropdown = {\n  \"fieldLabel\": \"Line\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": options.map((option) => {\n      return { option }\n    })\n  },\n  \"requiredField\": true\n}\n\nreturn { form: [ dropdown ] }"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3120,
+        32
+      ],
+      "id": "b5078e6c-4a55-4fc9-aba1-f3d3c553f91b",
+      "name": "Line"
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "15_n5IQFNUfn-K78agT3X8CcMO1Dxn3oc0_RwB-Gf_vw",
+          "mode": "list",
+          "cachedResultName": "bainultra",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15_n5IQFNUfn-K78agT3X8CcMO1Dxn3oc0_RwB-Gf_vw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1015220340,
+          "mode": "list",
+          "cachedResultName": "DAO_PVC",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15_n5IQFNUfn-K78agT3X8CcMO1Dxn3oc0_RwB-Gf_vw/edit#gid=1015220340"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        13232,
+        -112
+      ],
+      "id": "4c92643a-d5ff-4cb7-93ad-4e82b494397c",
+      "name": "Drain And Overflow Brass Sheet Collection",
+      "credentials": {
+        "googleApi": {
+          "id": "We2EMnzF5mMB8Qs4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "15_n5IQFNUfn-K78agT3X8CcMO1Dxn3oc0_RwB-Gf_vw",
+          "mode": "list",
+          "cachedResultName": "bainultra",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15_n5IQFNUfn-K78agT3X8CcMO1Dxn3oc0_RwB-Gf_vw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1015220340,
+          "mode": "list",
+          "cachedResultName": "DAO_PVC",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15_n5IQFNUfn-K78agT3X8CcMO1Dxn3oc0_RwB-Gf_vw/edit#gid=1015220340"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        13232,
+        176
+      ],
+      "id": "ae8a14e1-32fb-4220-a7b4-a62e26c7db1f",
+      "name": "Drain And Overflow PVC Sheet Collection",
+      "credentials": {
+        "googleApi": {
+          "id": "We2EMnzF5mMB8Qs4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://edge.bainultra.dev/api/v1/order-line-8e6e1d01",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer sauce"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('product').item.json.configuration }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        16000,
+        -48
+      ],
+      "id": "631f2071-492a-4e4d-9633-73b27f11708b",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Customer Order Line Created",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        16208,
+        -48
+      ],
+      "id": "180eb254-92fa-4e74-8e9a-118cd464f672",
+      "name": "Form",
+      "webhookId": "aa4a9f46-cf16-42ca-9223-db07b827d996"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        15024,
+        -48
+      ],
+      "id": "6e240e31-9456-4aab-9d22-e32f75980152",
+      "name": "Call 'add-options' Early Motor Shipment"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        14128,
+        -48
+      ],
+      "id": "7ecfd3cf-bac3-4588-adeb-12db7e50cd25",
+      "name": "Call 'add-options' Drain And Overflow"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        12336,
+        -48
+      ],
+      "id": "07cfd0ba-e7c4-4df5-bc0e-c3fb76c1d839",
+      "name": "Call 'add-options' Island Tub Drain"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        11216,
+        -48
+      ],
+      "id": "7c2eb1c2-91a1-4499-8a69-e1cb352bfd3c",
+      "name": "Call 'add-options' Cushion"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        10096,
+        -48
+      ],
+      "id": "ccb9844d-dd28-474b-ba2f-568a3c19b07c",
+      "name": "Call 'add-options' Deck"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        8976,
+        -48
+      ],
+      "id": "5ffc7175-9bf9-45cc-833d-f163c58439f6",
+      "name": "Call 'add-options' Feet"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        7856,
+        -48
+      ],
+      "id": "feb1b4cf-c658-41fb-b8c8-f9ee0585e2c4",
+      "name": "Call 'add-options' Skirt"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        6736,
+        -48
+      ],
+      "id": "4a621dbe-cb4d-4117-b123-768c441475cf",
+      "name": "Call 'add-options' Tile Flange"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        5616,
+        -112
+      ],
+      "id": "ceaf938d-58a0-4870-98f9-7b1d2ae967ac",
+      "name": "Call 'add-options' Combo Feet & Armrest"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        5616,
+        176
+      ],
+      "id": "277fd49b-1b32-4991-ab95-55a148a7a816",
+      "name": "Call 'add-options' Grab Bars"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        4048,
+        -112
+      ],
+      "id": "925e6457-a8e7-4863-aaf2-2327fc222913",
+      "name": "Call 'add-options' BU Control"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        3152,
+        -112
+      ],
+      "id": "7ee2c601-d1ec-4600-9f8d-5ad8538fb1a2",
+      "name": "Call 'add-options' MIA Control"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        2032,
+        -48
+      ],
+      "id": "6026a8a6-d51f-4454-a3d3-41904526dd4e",
+      "name": "Call 'add-options' Chromo"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        912,
+        -48
+      ],
+      "id": "32bc26a9-93ed-4bdc-b477-ad880db432f6",
+      "name": "Call 'add-options' Aroma"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -208,
+        224
+      ],
+      "id": "6d486ac1-c7ac-49ea-aa65-966a2ae4f14a",
+      "name": "Call 'add-options' Second WTS"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -208,
+        -160
+      ],
+      "id": "620f5b5e-5bad-4583-9403-d788c9407f77",
+      "name": "Call 'add-options' Second HBR"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {}
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -1104,
+        144
+      ],
+      "id": "29a8e0dd-c79b-42fc-8aea-6bacdbeb4bbd",
+      "name": "Call 'add-options' First WTS"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "TC6wSHtRmkGN446D",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/TC6wSHtRmkGN446D",
+          "cachedResultName": "add-options"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        -1104,
+        -96
+      ],
+      "id": "bbc0ad3d-4d46-448e-a6f1-5f3364e58134",
+      "name": "Call 'add-options' HBR"
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "value": "92JHN82usfnNxf1f",
+          "mode": "list",
+          "cachedResultName": "configurations",
+          "cachedResultUrl": "/projects/e1Ye65DfJRS4YYu9/datatables/92JHN82usfnNxf1f"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "options": "={{ $('product').first().json.configurationJSON }}"
+          },
+          "matchingColumns": [
+            "options"
+          ],
+          "schema": [
+            {
+              "id": "options",
+              "displayName": "options",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {
+          "optimizeBulk": false
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -2448,
+        32
+      ],
+      "id": "5c1453e0-8c00-4707-bc7b-60f307f76ef8",
+      "name": "Insert Product"
+    },
+    {
+      "parameters": {
+        "formTitle": "BainUltra Configurator",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Job Order"
+            }
+          ]
+        },
+        "options": {
+          "buttonLabel": "New Configuration"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        -7136,
+        32
+      ],
+      "id": "615262aa-5ca4-4628-b3b8-a96dbc28ca81",
+      "name": "Customer Order Form",
+      "webhookId": "a35b0cad-1d7c-439f-a1e5-744311054b2a"
+    },
+    {
+      "parameters": {
+        "jsCode": "const { fetch } = require('undici');\n\nvar response = await fetch('http://localhost:7379/get/products')\nresponse = await response.json()\nconst products = JSON.parse(response.get)\n\nreturn products"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -6912,
+        32
+      ],
+      "id": "71b58256-bbd5-4c40-a0eb-e9621d1deab5",
+      "name": "Products Sheet Collection"
+    },
+    {
+      "parameters": {
+        "jsCode": "const { fetch } = require('undici');\n\nvar response = await fetch('http://localhost:7379/get/options')\nresponse = await response.json()\nconst options = JSON.parse(response.get)\n\n// TODO filter item.json[\"PRODUCT SKU\"] === Product_SKU\n\nreturn options"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2224,
+        32
+      ],
+      "id": "3b62d4b5-1955-4a6f-a060-e82966008d46",
+      "name": "Options Sheet Collection"
+    }
+  ],
+  "connections": {
+    "Collection Form": {
+      "main": [
+        [
+          {
+            "node": "Installation Type List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Installation Type Form": {
+      "main": [
+        [
+          {
+            "node": "Model List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Collection List": {
+      "main": [
+        [
+          {
+            "node": "Collection Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Installation Type List": {
+      "main": [
+        [
+          {
+            "node": "Installation Type Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model List": {
+      "main": [
+        [
+          {
+            "node": "Model Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model Form": {
+      "main": [
+        [
+          {
+            "node": "Size List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Size List": {
+      "main": [
+        [
+          {
+            "node": "Dimension Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dimension Form": {
+      "main": [
+        [
+          {
+            "node": "Deck Feature List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deck Feature List": {
+      "main": [
+        [
+          {
+            "node": "Deck Feature Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deck Feature Form": {
+      "main": [
+        [
+          {
+            "node": "Handing List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Handing List": {
+      "main": [
+        [
+          {
+            "node": "Handing Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Handing Form": {
+      "main": [
+        [
+          {
+            "node": "Color List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Color List": {
+      "main": [
+        [
+          {
+            "node": "Color Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Color Form": {
+      "main": [
+        [
+          {
+            "node": "Finish List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Finish List": {
+      "main": [
+        [
+          {
+            "node": "Surface Finish Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Surface Finish Form": {
+      "main": [
+        [
+          {
+            "node": "Line",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "product": {
+      "main": [
+        [
+          {
+            "node": "Insert Product",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TMU Second HBR Form": {
+      "main": [
+        [
+          {
+            "node": "Second HBR",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Second HBR": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Second HBR",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HBR": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' HBR",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WTS": {
+      "main": [
+        [
+          {
+            "node": "Tub First WTS Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tub First WTS Form": {
+      "main": [
+        [
+          {
+            "node": "First WTS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "First WTS": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' First WTS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Second HBR": {
+      "main": [
+        [
+          {
+            "node": "TMU Second HBR Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Aroma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tub Second WTS Form": {
+      "main": [
+        [
+          {
+            "node": "Second WTS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Second WTS": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Second WTS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aroma": {
+      "main": [
+        [
+          {
+            "node": "If Aroma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Aroma": {
+      "main": [
+        [
+          {
+            "node": "Aroma Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Chromo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aroma Form": {
+      "main": [
+        [
+          {
+            "node": "Aroma Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aroma Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Aroma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chromo": {
+      "main": [
+        [
+          {
+            "node": "If Chromo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Chromo": {
+      "main": [
+        [
+          {
+            "node": "Chromo Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Combo Feet & Armrest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chromo Form": {
+      "main": [
+        [
+          {
+            "node": "Chromo Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chromo Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Chromo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Line Switch": {
+      "main": [
+        [
+          {
+            "node": "HBR",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "WTS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Control Switch": {
+      "main": [
+        [
+          {
+            "node": "MIA Control",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Combo Feet & Armrest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MIA Control": {
+      "main": [
+        [
+          {
+            "node": "MIA Control Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MIA Control Form": {
+      "main": [
+        [
+          {
+            "node": "MIA Control Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MIA Control Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' MIA Control",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "BU-Touch Control": {
+      "main": [
+        [
+          {
+            "node": "BU-Touch Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "BU-Touch Form": {
+      "main": [
+        [
+          {
+            "node": "BU-Touch Control Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "BU-Touch Control Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' BU Control",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Grab Bars": {
+      "main": [
+        [
+          {
+            "node": "If Grab Bars",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Grab Bars": {
+      "main": [
+        [
+          {
+            "node": "Grab Bars Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Tile Flange",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Grab Bars Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Grab Bars",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Grab Bars Form": {
+      "main": [
+        [
+          {
+            "node": "Grab Bars Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tile Flange": {
+      "main": [
+        [
+          {
+            "node": "If Tile Flange",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Tile Flange": {
+      "main": [
+        [
+          {
+            "node": "Tile Flange Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Skirt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tile Flange Form": {
+      "main": [
+        [
+          {
+            "node": "Tile Flange Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tile Flange Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Tile Flange",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Second WTS": {
+      "main": [
+        [
+          {
+            "node": "Tub Second WTS Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Aroma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Skirt": {
+      "main": [
+        [
+          {
+            "node": "If Skirt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Skirt": {
+      "main": [
+        [
+          {
+            "node": "Skirt Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Feet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Skirt Form": {
+      "main": [
+        [
+          {
+            "node": "Skirt Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Skirt Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Skirt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Feet": {
+      "main": [
+        [
+          {
+            "node": "If Feet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Feet": {
+      "main": [
+        [
+          {
+            "node": "Feet Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Deck",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Feet Form": {
+      "main": [
+        [
+          {
+            "node": "Feet Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Feet Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Feet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deck Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Deck",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deck Form": {
+      "main": [
+        [
+          {
+            "node": "Deck Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Deck": {
+      "main": [
+        [
+          {
+            "node": "Deck Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Cushion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deck": {
+      "main": [
+        [
+          {
+            "node": "If Deck",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cushion": {
+      "main": [
+        [
+          {
+            "node": "If Cushion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Cushion": {
+      "main": [
+        [
+          {
+            "node": "Cushion Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Island Tub Drain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cushion Form": {
+      "main": [
+        [
+          {
+            "node": "Cushion Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cushion Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Cushion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Island Tub Drain": {
+      "main": [
+        [
+          {
+            "node": "If Island Tub Drain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Island Tub Drain": {
+      "main": [
+        [
+          {
+            "node": "Island Tub Drain Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Drain And Overflow Material",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Island Tub Drain Form": {
+      "main": [
+        [
+          {
+            "node": "Island Tub Drain Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Island Tub Drain Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Island Tub Drain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Price": {
+      "main": [
+        [
+          {
+            "node": "Price Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Price Form": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combo Feet & Armrest": {
+      "main": [
+        [
+          {
+            "node": "If Combo Feet & Armrest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Combo Feet & Armrest": {
+      "main": [
+        [
+          {
+            "node": "Combo Feet & Armrest Form",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Grab Bars",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combo Feet & Armrest Form": {
+      "main": [
+        [
+          {
+            "node": "Combo Feet & Armrest Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combo Feet & Armrest Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Combo Feet & Armrest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Configuration": {
+      "main": [
+        [
+          {
+            "node": "Price",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drain And Overflow Material": {
+      "main": [
+        [
+          {
+            "node": "Drain And Overflow Material Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drain And Overflow Material Form": {
+      "main": [
+        [
+          {
+            "node": "Drain And Overflow Material Form Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drain And Overflow": {
+      "main": [
+        [
+          {
+            "node": "Drain And Overflow Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drain And Overflow Form": {
+      "main": [
+        [
+          {
+            "node": "Drain And Overflow Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drain And Overflow Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Drain And Overflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drain And Overflow Material Form Switch": {
+      "main": [
+        [
+          {
+            "node": "Drain And Overflow Brass Sheet Collection",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Drain And Overflow PVC Sheet Collection",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Drain And Overflow Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Early Motor Shipment": {
+      "main": [
+        [
+          {
+            "node": "Early Motor Shipment Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Early Motor Shipment Form": {
+      "main": [
+        [
+          {
+            "node": "Early Motor Shipment Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Early Motor Shipment Selection": {
+      "main": [
+        [
+          {
+            "node": "Call 'add-options' Early Motor Shipment",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Line Form": {
+      "main": [
+        [
+          {
+            "node": "product",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Line": {
+      "main": [
+        [
+          {
+            "node": "Line Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drain And Overflow Brass Sheet Collection": {
+      "main": [
+        [
+          {
+            "node": "Drain And Overflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drain And Overflow PVC Sheet Collection": {
+      "main": [
+        [
+          {
+            "node": "Drain And Overflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Early Motor Shipment": {
+      "main": [
+        [
+          {
+            "node": "Get Configuration",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Drain And Overflow": {
+      "main": [
+        [
+          {
+            "node": "Early Motor Shipment",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Island Tub Drain": {
+      "main": [
+        [
+          {
+            "node": "Drain And Overflow Material",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Cushion": {
+      "main": [
+        [
+          {
+            "node": "Island Tub Drain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Deck": {
+      "main": [
+        [
+          {
+            "node": "Cushion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Feet": {
+      "main": [
+        [
+          {
+            "node": "Deck",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Skirt": {
+      "main": [
+        [
+          {
+            "node": "Feet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Tile Flange": {
+      "main": [
+        [
+          {
+            "node": "Skirt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Combo Feet & Armrest": {
+      "main": [
+        [
+          {
+            "node": "Tile Flange",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Grab Bars": {
+      "main": [
+        [
+          {
+            "node": "Tile Flange",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' BU Control": {
+      "main": [
+        [
+          {
+            "node": "Combo Feet & Armrest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' MIA Control": {
+      "main": [
+        [
+          {
+            "node": "BU-Touch Control",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Chromo": {
+      "main": [
+        [
+          {
+            "node": "Control Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Aroma": {
+      "main": [
+        [
+          {
+            "node": "Chromo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Second WTS": {
+      "main": [
+        [
+          {
+            "node": "Aroma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' Second HBR": {
+      "main": [
+        [
+          {
+            "node": "Aroma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' First WTS": {
+      "main": [
+        [
+          {
+            "node": "If Second WTS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call 'add-options' HBR": {
+      "main": [
+        [
+          {
+            "node": "If Second HBR",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert Product": {
+      "main": [
+        [
+          {
+            "node": "Options Sheet Collection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Customer Order Form": {
+      "main": [
+        [
+          {
+            "node": "Products Sheet Collection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Products Sheet Collection": {
+      "main": [
+        [
+          {
+            "node": "Collection List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Options Sheet Collection": {
+      "main": [
+        [
+          {
+            "node": "Line Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "cf61a41482dd6099afc7b58566870ccc4a2f9ce8ddec60f7c393404a4df173a7"
+  }
+}
