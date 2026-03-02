@@ -2410,12 +2410,12 @@
     },
     {
       "parameters": {
-        "jsCode": "const { fetch } = require('undici');\n\nvar response = await fetch('http://localhost:7379/get/options')\nresponse = await response.json()\nconst options = JSON.parse(response.get)\n\n// TODO filter item.json[\"PRODUCT SKU\"] === Product_SKU\n\nreturn options"
+        "jsCode": "const { fetch } = require('undici');\n\nvar response = await fetch('http://localhost:7379/get/options')\nresponse = await response.json()\nvar options = JSON.parse(response.get)\n\noptions = options.filter((option) => {\n  return option[\"PRODUCT SKU\"] === $('product').first().json.configuration.base.Product_SKU\n})\n\nreturn options"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2224,
+        -2320,
         32
       ],
       "id": "3b62d4b5-1955-4a6f-a060-e82966008d46",
@@ -2603,7 +2603,7 @@
       "main": [
         [
           {
-            "node": "Insert Product",
+            "node": "Options Sheet Collection",
             "type": "main",
             "index": 0
           }
@@ -3739,17 +3739,6 @@
         [
           {
             "node": "If Second HBR",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Insert Product": {
-      "main": [
-        [
-          {
-            "node": "Options Sheet Collection",
             "type": "main",
             "index": 0
           }
