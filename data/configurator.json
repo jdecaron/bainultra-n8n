@@ -251,7 +251,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const { fetch } = require('undici')\n\nfunction uniqueKey() {\n  const now = new Date()\n  const date = now.toISOString().slice(0, 10)\n  const ms = now % 86400000\n  const rand = String(Math.floor(Math.random() * 1000)).padStart(3, '0')\n  return `${date}_${ms}_${rand}`\n}\nconst key = uniqueKey()\n\nlet configuration\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color &&\n    product.json.Surface_Finish === $(\"Surface Finish Form\").first().json[\"Surface Finish\"].split(',')[0] &&\n    product.json.Line === $(\"Line Form\").first().json[\"Line\"]\n  ) {\n    configuration = { base: product.json, co_num: $(\"Customer Order Form\").first().json['Customer Order'], options: [] }\n  }\n})\n\nawait fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n\nreturn { configuration, key }"
+        "jsCode": "function uniqueKey() {\n  const now = new Date()\n  const date = now.toISOString().slice(0, 10)\n  const ms = now % 86400000\n  const rand = String(Math.floor(Math.random() * 1000)).padStart(3, '0')\n  return `${date}_${ms}_${rand}`\n}\nconst key = uniqueKey()\n\nlet configuration\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color &&\n    product.json.Surface_Finish === $(\"Surface Finish Form\").first().json[\"Surface Finish\"].split(',')[0] &&\n    product.json.Line === $(\"Line Form\").first().json[\"Line\"]\n  ) {\n    configuration = { base: product.json, co_num: $(\"Customer Order Form\").first().json['Customer Order'], options: [] }\n  }\n})\n\nconst { fetch } = require('undici')\nawait fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n\nreturn { configuration, key }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -260,7 +260,8 @@
         -1040
       ],
       "id": "cc058eeb-9dc0-4d49-a98e-c01e82f15ae8",
-      "name": "product"
+      "name": "product",
+      "executeOnce": false
     },
     {
       "parameters": {
@@ -273,7 +274,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        672,
+        880,
         -1232
       ],
       "id": "da62155f-dcdc-4717-bbb0-25edc1c9ff91",
@@ -287,7 +288,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        896,
+        1104,
         -1232
       ],
       "id": "fb4af5c1-a07c-4f7a-bf18-fb450ed6ef82",
@@ -300,7 +301,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        0,
+        208,
         -1168
       ],
       "id": "ce46fae2-acba-4d76-aa21-498f863f10ff",
@@ -314,7 +315,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -448,
+        -240,
         -928
       ],
       "id": "cd42a920-4fbe-4368-8049-6d8abce7d18c",
@@ -332,7 +333,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -224,
+        -16,
         -928
       ],
       "id": "74729e7d-6528-451b-8db1-b5f2d6b65b09",
@@ -346,7 +347,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        0,
+        208,
         -928
       ],
       "id": "010dacf8-b1c7-495b-b8e8-3c6d53cec54c",
@@ -380,7 +381,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        448,
+        656,
         -1168
       ],
       "id": "9da6a211-4eb1-4727-9809-226518cb374a",
@@ -397,7 +398,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        672,
+        880,
         -848
       ],
       "id": "03832352-5955-4baf-9e91-661d4e1d2959",
@@ -411,7 +412,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        896,
+        1104,
         -848
       ],
       "id": "16e93bbe-531a-4dec-a131-4fe146f672ce",
@@ -424,7 +425,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1344,
+        1552,
         -1040
       ],
       "id": "ec684a82-68d4-48f3-82e4-7cc936a68a2a",
@@ -458,7 +459,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        1568,
+        1776,
         -1040
       ],
       "id": "187ff6f4-8aad-4d60-9d87-3953c05eb7a9",
@@ -475,7 +476,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        1792,
+        2000,
         -1120
       ],
       "id": "0d54c9bc-8a79-4847-bcb7-a66a5db5cad5",
@@ -489,7 +490,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2016,
+        2224,
         -1120
       ],
       "id": "c0e13ff9-1654-4dd2-b351-b462c30f18a4",
@@ -502,7 +503,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2464,
+        2672,
         -1040
       ],
       "id": "3d58e620-f498-4c62-8740-4ae5d4c8476b",
@@ -536,7 +537,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        2688,
+        2896,
         -1040
       ],
       "id": "020039ae-03d3-4bc7-82a8-da188dff32b0",
@@ -553,7 +554,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        2912,
+        3120,
         -1120
       ],
       "id": "2ae3e969-485a-457d-9c22-593be82fe82b",
@@ -567,7 +568,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3136,
+        3344,
         -1120
       ],
       "id": "8e75ff96-ad7b-485f-a4e2-9da24d1f0352",
@@ -635,7 +636,7 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3,
       "position": [
-        -672,
+        -464,
         -1040
       ],
       "id": "1c9a49f7-74fc-4788-8fad-b4a0091be21d",
@@ -703,7 +704,7 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3,
       "position": [
-        3584,
+        3792,
         -1120
       ],
       "id": "08421023-baab-42b2-b3b2-47edfc7ea15d",
@@ -716,7 +717,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3808,
+        4016,
         -1184
       ],
       "id": "8a175712-ffae-40bf-99c1-ceab8eb30196",
@@ -733,7 +734,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        4032,
+        4240,
         -1184
       ],
       "id": "eb6aa6a3-7338-4f4d-bbf5-4100c78f9b32",
@@ -747,7 +748,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        4256,
+        4464,
         -1184
       ],
       "id": "8ad08494-231f-47c6-b880-27707a31e9c9",
@@ -760,7 +761,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        4704,
+        4912,
         -1184
       ],
       "id": "c4e58f83-2271-4028-9062-6a3759175eba",
@@ -777,7 +778,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        4928,
+        5136,
         -1184
       ],
       "id": "3c19e0c5-43b7-41ae-9301-693a238ab23f",
@@ -791,7 +792,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        5152,
+        5360,
         -1184
       ],
       "id": "08e501d2-24b1-4e4b-8b06-30b044bab0eb",
@@ -804,7 +805,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        6048,
+        6256,
         -976
       ],
       "id": "98a1135d-8805-40c5-b397-7e29c920a4f8",
@@ -838,7 +839,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        6272,
+        6480,
         -976
       ],
       "id": "561028db-88b8-4a39-8ce7-b593b0b1ec7d",
@@ -851,7 +852,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        6720,
+        6928,
         -896
       ],
       "id": "a4fbff4d-2c93-4c81-821e-980e6a47ae3f",
@@ -868,7 +869,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        6496,
+        6704,
         -896
       ],
       "id": "6d0cc2d0-fcbc-4bc1-bd2a-f9dec76fa2aa",
@@ -882,7 +883,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        7168,
+        7376,
         -1040
       ],
       "id": "0815edca-a239-4131-a30c-7a35a062f320",
@@ -916,7 +917,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        7392,
+        7600,
         -1040
       ],
       "id": "922ea98e-a79a-4237-b2cc-096bf07ad52b",
@@ -933,7 +934,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        7616,
+        7824,
         -1120
       ],
       "id": "d4126ada-2d8c-4c91-acf9-792bed0f522e",
@@ -947,7 +948,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        7840,
+        8048,
         -1120
       ],
       "id": "66708bd1-1f31-4ac3-9131-226907532e7c",
@@ -991,7 +992,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        448,
+        656,
         -928
       ],
       "id": "9543ea9f-9f20-4813-83a7-59e7aea97a74",
@@ -1007,7 +1008,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        8288,
+        8496,
         -1040
       ],
       "id": "7fda7453-5041-4aca-a8a4-25b34535af55",
@@ -1041,7 +1042,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        8512,
+        8720,
         -1040
       ],
       "id": "fbfadfcc-e3c7-48f1-bf51-8531afc36285",
@@ -1058,7 +1059,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        8736,
+        8944,
         -1120
       ],
       "id": "1d687f70-8a1c-47fb-8d2f-a08697531de7",
@@ -1072,7 +1073,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        8960,
+        9168,
         -1120
       ],
       "id": "c80c167e-cf30-4673-a174-598c84d05613",
@@ -1085,7 +1086,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        9408,
+        9616,
         -1040
       ],
       "id": "f0cefca0-3585-4039-bc64-7a2d89c51532",
@@ -1129,7 +1130,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        9632,
+        9840,
         -1040
       ],
       "id": "1d39aec6-9650-45fe-b900-6d41d038be57",
@@ -1146,7 +1147,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        9856,
+        10064,
         -1120
       ],
       "id": "bc9daa5b-3d4e-4f18-8fb4-204ff919f455",
@@ -1160,7 +1161,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        10080,
+        10288,
         -1120
       ],
       "id": "c9e9de1d-e704-4617-8db0-3a04f94d2db8",
@@ -1173,7 +1174,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        11200,
+        11408,
         -1120
       ],
       "id": "55679468-b8a9-447c-884f-c41b657ad320",
@@ -1190,7 +1191,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        10976,
+        11184,
         -1120
       ],
       "id": "ff14140f-176e-4898-ad85-87ec49537fea",
@@ -1225,7 +1226,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        10752,
+        10960,
         -1040
       ],
       "id": "e1a3ac63-adb9-44ae-a68a-ba5435e76ccb",
@@ -1238,7 +1239,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        10528,
+        10736,
         -1040
       ],
       "id": "96ad1a5d-6f4a-48b7-acfe-f3da4c76133d",
@@ -1251,7 +1252,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        11648,
+        11856,
         -1040
       ],
       "id": "e00a1ebf-3a7e-42fe-b699-e222873ea7b2",
@@ -1285,7 +1286,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        11872,
+        12080,
         -1040
       ],
       "id": "160fbfb9-4335-431b-af91-b1ff962a06bb",
@@ -1302,7 +1303,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        12096,
+        12304,
         -1120
       ],
       "id": "e821c6dc-5458-4078-b381-87c8bc2ac689",
@@ -1316,7 +1317,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        12320,
+        12528,
         -1120
       ],
       "id": "c6447e33-9ffe-41cb-add0-1edc23c4c45c",
@@ -1329,7 +1330,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        12768,
+        12976,
         -1040
       ],
       "id": "ed653f56-2216-4e97-ae4a-61973cff6e34",
@@ -1363,7 +1364,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        12992,
+        13200,
         -1040
       ],
       "id": "80d24c65-9684-458f-8642-7316524b56e8",
@@ -1380,7 +1381,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        13216,
+        13424,
         -1120
       ],
       "id": "320c8c4c-461d-4488-91a7-6df7269bf959",
@@ -1394,7 +1395,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        13440,
+        13648,
         -1120
       ],
       "id": "9d6c0bca-3081-4dd6-b16d-ce6e5830d8aa",
@@ -1407,7 +1408,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        16800,
+        17008,
         -1120
       ],
       "id": "4a55fee8-c2a1-4f98-9bd2-b5b466d48f1c",
@@ -1423,7 +1424,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        17088,
+        17296,
         -1120
       ],
       "id": "08ed7509-982c-47ec-ac65-6ad4ee90000f",
@@ -1437,7 +1438,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        5600,
+        5808,
         -1040
       ],
       "id": "e23633e1-45c5-4ac6-a8e8-c31aa14d2a02",
@@ -1471,7 +1472,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        5824,
+        6032,
         -1040
       ],
       "id": "8aa621b3-1e58-4a52-9807-84cc5386e2ba",
@@ -1488,7 +1489,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        6496,
+        6704,
         -1184
       ],
       "id": "4914c3d8-c868-4364-a135-f9200d3b52a9",
@@ -1502,7 +1503,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        6720,
+        6928,
         -1184
       ],
       "id": "d903f995-094f-46fe-94a4-9ea47b1f73ad",
@@ -1515,7 +1516,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        13888,
+        14096,
         -1040
       ],
       "id": "b21bc9d2-3354-46ff-a9f8-c0e91ac42e10",
@@ -1532,7 +1533,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        14112,
+        14320,
         -1040
       ],
       "id": "065e7f80-e41d-4396-a482-f295d69dd6d4",
@@ -1546,7 +1547,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        14784,
+        14992,
         -1184
       ],
       "id": "312612b7-b20a-4570-b2d5-52871a7b5f9f",
@@ -1563,7 +1564,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        15008,
+        15216,
         -1184
       ],
       "id": "2f10def0-fb1c-468e-a440-bde9015d148b",
@@ -1577,7 +1578,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        15232,
+        15440,
         -1120
       ],
       "id": "73bdff02-bdd6-4992-a1ae-6eb9b29944ab",
@@ -1668,7 +1669,7 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3,
       "position": [
-        14336,
+        14544,
         -1056
       ],
       "id": "d4459023-9633-48ba-acae-2e4dda4eef4c",
@@ -1681,7 +1682,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        15680,
+        15888,
         -1120
       ],
       "id": "c714b1e5-be3c-4d47-b3fc-d0f585657bad",
@@ -1698,7 +1699,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        15904,
+        16112,
         -1120
       ],
       "id": "b39e7bce-c9ca-4381-b22e-050da2b4ed72",
@@ -1712,7 +1713,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        16336,
+        16544,
         -1120
       ],
       "id": "318f9cbe-cdc7-48fc-984a-277d3f92b321",
@@ -1771,7 +1772,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        14560,
+        14768,
         -1184
       ],
       "id": "b4f2bb70-9de7-4348-aeec-6d099b3d3ae4",
@@ -1805,7 +1806,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        14560,
+        14768,
         -896
       ],
       "id": "c607492d-548c-4c68-a077-adacecdd4173",
@@ -1826,7 +1827,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        17536,
+        17744,
         -1120
       ],
       "id": "5291de58-bb4b-4343-8a90-4841a1a5683d",
@@ -1839,7 +1840,7 @@
         "formFields": {
           "values": [
             {
-              "fieldLabel": "Job Order"
+              "fieldLabel": "Customer Order"
             }
           ]
         },
@@ -1877,11 +1878,24 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -992,
+        -784,
         -1040
       ],
       "id": "0d4c2ce9-800c-4a73-949b-01a3b6e6551a",
       "name": "Options Sheet Collection"
+    },
+    {
+      "parameters": {
+        "jsCode": "const { fetch } = require('undici')\nvar key = $('product').first().json.key\nvar response = await fetch(`http://localhost:7379/get/${key}`)\nresponse = await response.json()\nvar configuration = JSON.parse(response.get)\n\nconst axios = require('axios')\n// await axios.post('https://intercrinal-undegenerated-lavonne.ngrok-free.dev/api/v1/order-line-8e6e1d01', { configuration })\nawait axios.post('https://edge.bainultra.dev/api/v1/order-line-8e6e1d01', { configuration })\n\nreturn {}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1072,
+        -1040
+      ],
+      "id": "24eab2e8-35a9-4344-b70d-538551161339",
+      "name": "Code in JavaScript"
     }
   ],
   "connections": {
@@ -2065,7 +2079,7 @@
       "main": [
         [
           {
-            "node": "Options Sheet Collection",
+            "node": "Code in JavaScript",
             "type": "main",
             "index": 0
           }
@@ -3014,6 +3028,17 @@
         [
           {
             "node": "Line Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Options Sheet Collection",
             "type": "main",
             "index": 0
           }
