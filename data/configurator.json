@@ -251,7 +251,7 @@
     },
     {
       "parameters": {
-        "jsCode": "function uniqueKey() {\n  const now = new Date()\n  const date = now.toISOString().slice(0, 10)\n  const ms = now % 86400000\n  const rand = String(Math.floor(Math.random() * 1000)).padStart(3, '0')\n  return `${date}_${ms}_${rand}`\n}\nconst key = uniqueKey()\n\nlet configuration\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color &&\n    product.json.Surface_Finish === $(\"Surface Finish Form\").first().json[\"Surface Finish\"].split(',')[0] &&\n    product.json.Line === $(\"Line Form\").first().json[\"Line\"]\n  ) {\n    configuration = { base: product.json, co_num: $(\"Customer Order Form\").first().json['Customer Order'], options: [] }\n  }\n})\n\nconst { fetch } = require('undici')\nawait fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n\nreturn { configuration, key }"
+        "jsCode": "function uniqueKey() {\n  const now = new Date()\n  const date = now.toISOString().slice(0, 10)\n  const ms = now % 86400000\n  const rand = String(Math.floor(Math.random() * 1000)).padStart(3, '0')\n  return `${date}_${ms}_${rand}`\n}\nconst key = uniqueKey()\n\nlet configuration\n\n$(\"Products Sheet Collection\").all().forEach((product) => {\n  if (\n    product.json.Collection === $(\"Collection Form\").first().json.Collection &&\n    product.json.Installation_Type === $(\"Installation Type Form\").first().json[\"Installation Type\"] &&\n    product.json.Model === $(\"Model Form\").first().json.Model &&\n    String(product.json.LW) === $(\"Dimension Form\").first().json.Dimension &&\n    product.json.Deck_Feature === $(\"Deck Feature Form\").first().json[\"Deck Feature\"] &&\n    product.json.Handing === $(\"Handing Form\").first().json.Handing &&\n    product.json.Color === $(\"Color Form\").first().json.Color &&\n    product.json.Surface_Finish === $(\"Surface Finish Form\").first().json[\"Surface Finish\"].split(',')[0] &&\n    product.json.Line === $(\"Line Form\").first().json[\"Line\"]\n  ) {\n    configuration = { base: product.json, co_num: $(\"Customer Order Form\").first().json['Customer Order'], options: [] }\n  }\n})\n\nconst axios = require('axios')\nawait axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n\nreturn { configuration, key }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -283,7 +283,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = $('HBR').first().json.secondHeatingZone\nif ($(\"TMU Second HBR Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = $('HBR').first().json.secondHeatingZone\nif ($(\"TMU Second HBR Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -296,7 +296,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let secondHeatingZone = []\nlet options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMMOD00T-02 2nd not available\t\t\t\t\t\t\t\t\t\t\t\n// BAMSRB00T-02 2nd included\n// BSCMOF00T-01 2nd + price\n// Product_SKU = \"BSCMOF00T-01\"\n$(\"Options Sheet Collection\").all().forEach((option) => {\n  if (\n    option.json[\"PRODUCT SKU\"] === Product_SKU &&\n    option.json[\"FEATURE\"] == \"WTS\"\n  ) {\n    if (option.json[\"Option Price\"] > 0) {\n      secondHeatingZone.push(option.json)\n    } else {\n      options.push(option.json)\n    }\n  }\n})\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nconst dropdown = {\n  \"fieldLabel\": \"Second Heated Backrest\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": secondHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options, secondHeatingZone }"
+        "jsCode": "let secondHeatingZone = []\nlet options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMMOD00T-02 2nd not available\t\t\t\t\t\t\t\t\t\t\t\n// BAMSRB00T-02 2nd included\n// BSCMOF00T-01 2nd + price\n// Product_SKU = \"BSCMOF00T-01\"\n$(\"Options Sheet Collection\").all().forEach((option) => {\n  if (\n    option.json[\"PRODUCT SKU\"] === Product_SKU &&\n    option.json[\"FEATURE\"] == \"WTS\"\n  ) {\n    if (option.json[\"Option Price\"] > 0) {\n      secondHeatingZone.push(option.json)\n    } else {\n      options.push(option.json)\n    }\n  }\n})\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nconst dropdown = {\n  \"fieldLabel\": \"Second Heated Backrest\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": secondHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options, secondHeatingZone }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -342,7 +342,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = $('WTS').first().json.firstHeatingZone\nif ($(\"Tub First WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = $('WTS').first().json.firstHeatingZone\nif ($(\"Tub First WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -407,7 +407,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = $('WTS').first().json.secondHeatingZone\nif ($(\"Tub Second WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = $('WTS').first().json.secondHeatingZone\nif ($(\"Tub Second WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -485,7 +485,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Aroma').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Aroma Form\").first().json[\"Aromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Aroma').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Aroma Form\").first().json[\"Aromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -563,7 +563,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Chromo').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Chromo Form\").first().json[\"Chromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Chromo').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Chromo Form\").first().json[\"Chromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -743,7 +743,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('MIA Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"MIA Control Form\").first().json[\"MIA Control\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('MIA Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"MIA Control Form\").first().json[\"MIA Control\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -787,7 +787,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('BU-Touch Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"BU-Touch Form\").first().json[\"BU-Touch Control\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('BU-Touch Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"BU-Touch Form\").first().json[\"BU-Touch Control\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -847,7 +847,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Grab Bars').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Grab Bars Form\").first().json[\"Grab Bars\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Grab Bars').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Grab Bars Form\").first().json[\"Grab Bars\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -943,7 +943,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Tile Flange').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Tile Flange Form\").first().json[\"Tile Flange\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Tile Flange').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Tile Flange Form\").first().json[\"Tile Flange\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1068,7 +1068,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Skirt').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Skirt Form\").first().json[\"Skirt\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Skirt').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Skirt Form\").first().json[\"Skirt\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1156,7 +1156,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Feet').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Feet Form\").first().json[\"Feet\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Feet').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Feet Form\").first().json[\"Feet\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1169,7 +1169,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Deck').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Deck Form\").first().json[\"Deck\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Deck').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Deck Form\").first().json[\"Deck\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1312,7 +1312,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Cushion').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Cushion Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Cushion').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Cushion Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1390,7 +1390,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Island Tub Drain').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Island Tub Drain Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Island Tub Drain').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Island Tub Drain Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1498,7 +1498,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Combo Feet & Armrest').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Combo Feet & Armrest Form\").first().json[\"Combo Feet & Armrest\"]) {\n    options.push(item)\n  }\n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Combo Feet & Armrest').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Combo Feet & Armrest Form\").first().json[\"Combo Feet & Armrest\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1573,7 +1573,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nif ($('Drain And Overflow Material Form').first().json['Drain And Overflow']) {\n  options .push(    \n    {\n      \"OPTION SKU\": \"BOVER00-00\",\n      \"PRODUCT_OPTION_NAME\": \"NO DRAIN\",\n      \"Option Price\": 0,\n    })\n} else {\n  for (const item of $('Drain And Overflow').first().json.options) {\n    if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Drain And Overflow Form\").first().json[\"Drain And Overflow\"]) {\n      options.push(item)\n    }\n  }  \n}\n\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  var configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nif ($('Drain And Overflow Material Form').first().json['Drain And Overflow']) {\n  options .push(    \n    {\n      \"OPTION SKU\": \"BOVER00-00\",\n      \"PRODUCT_OPTION_NAME\": \"NO DRAIN\",\n      \"Option Price\": 0,\n    })\n} else {\n  for (const item of $('Drain And Overflow').first().json.options) {\n    if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Drain And Overflow Form\").first().json[\"Drain And Overflow\"]) {\n      options.push(item)\n    }\n  }  \n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1708,7 +1708,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Early Motor Shipment').first().json.options) {\n  if (\n    `${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] &&\n    $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] === `EARLY MOTOR SHIPMENT, +$${item[\"Option Price\"]}`\n     ) {\n    options.push(item)\n  }\n}\n\nvar configuration\nconst { fetch } = require('undici')\nasync function addOptions() {\n  var key = $('product').first().json.key\n  var response = await fetch(`http://localhost:7379/get/${key}`)\n  response = await response.json()\n  configuration = JSON.parse(response.get)\n  \n  await fetch(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`);\n}\nawait addOptions()\n\n// https://edge.bainultra.dev/api/v1/order-line-8e6e1d01\n\nreturn { configuration, options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Early Motor Shipment').first().json.options) {\n  if (\n    `${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] &&\n    $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] === `EARLY MOTOR SHIPMENT, +$${item[\"Option Price\"]}`\n     ) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nvar configuration\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nawait axios.post('https://intercrinal-undegenerated-lavonne.ngrok-free.dev/api/v1/order-line-8e6e1d01', { configuration })\n// await axios.post('https://edge.bainultra.dev/api/v1/order-line-8e6e1d01', { configuration })\n\nreturn { configuration, options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1860,7 +1860,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const { fetch } = require('undici')\n\nvar response = await fetch('http://localhost:7379/get/products')\nresponse = await response.json()\nconst products = JSON.parse(response.get)\n\nreturn products"
+        "jsCode": "const axios = require('axios')\n\nconst response = await axios.get('http://localhost:7379/get/products')\nconst products = JSON.parse(response.data.get)\n\nreturn products"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1886,7 +1886,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const { fetch } = require('undici')\nvar key = $('product').first().json.key\nvar response = await fetch(`http://localhost:7379/get/${key}`)\nresponse = await response.json()\nvar configuration = JSON.parse(response.get)\n\nconst axios = require('axios')\n// await axios.post('https://intercrinal-undegenerated-lavonne.ngrok-free.dev/api/v1/order-line-8e6e1d01', { configuration })\nawait axios.post('https://edge.bainultra.dev/api/v1/order-line-8e6e1d01', { configuration })\n\nreturn {}"
+        "jsCode": "const axios = require('axios')\n\nconst key = $('product').first().json.key\nconst response = await axios.get(`http://localhost:7379/get/${key}`)\nconst configuration = JSON.parse(response.data.get)\n\n// await axios.post('https://intercrinal-undegenerated-lavonne.ngrok-free.dev/api/v1/order-line-8e6e1d01', { configuration })\nawait axios.post('https://edge.bainultra.dev/api/v1/order-line-8e6e1d01', { configuration })\n\nreturn {}"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
