@@ -11,10 +11,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -5152,
-        -1040
+        -2432,
+        -1344
       ],
-      "id": "be9781e2-ae25-4c65-aef0-4489dc8fea05",
+      "id": "b94e99f6-c9fb-441a-a497-e54176a2fd64",
       "name": "Collection Form",
       "webhookId": "895adc30-15c3-4496-864e-d765bd95cee1"
     },
@@ -29,10 +29,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -4704,
-        -1040
+        -1984,
+        -1344
       ],
-      "id": "232c3fd2-c3e4-43cf-a39d-daf50b0145d9",
+      "id": "711d830c-b94d-401c-899a-9b57c34c257c",
       "name": "Installation Type Form",
       "webhookId": "895adc30-15c3-4496-864e-d765bd95cee1"
     },
@@ -43,10 +43,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -5360,
-        -1040
+        -2640,
+        -1344
       ],
-      "id": "f189ce50-c4a3-410d-8398-cbffcc9084fb",
+      "id": "9dd7500b-5126-4612-8052-506c5ac4606e",
       "name": "Collection List"
     },
     {
@@ -56,10 +56,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -4928,
-        -1040
+        -2208,
+        -1344
       ],
-      "id": "443ad208-9e54-4be8-bc3d-02729b55de8e",
+      "id": "3240e5bd-fd36-49c5-a5bf-88d2379dd1d4",
       "name": "Installation Type List"
     },
     {
@@ -69,10 +69,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -4480,
-        -1040
+        -1760,
+        -1344
       ],
-      "id": "35aacbdf-675d-4130-9afb-5902019a53b6",
+      "id": "335c4314-0012-4b6b-97bc-11770467d843",
       "name": "Model List"
     },
     {
@@ -86,10 +86,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -4256,
-        -1040
+        -1536,
+        -1344
       ],
-      "id": "2e02e6e3-37f3-40da-b633-3715044c1a77",
+      "id": "f4ab7c70-e326-4396-bd5c-503699112097",
       "name": "Model Form",
       "webhookId": "895adc30-15c3-4496-864e-d765bd95cee1"
     },
@@ -100,10 +100,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -4032,
-        -1040
+        -1312,
+        -1344
       ],
-      "id": "09097f15-1e70-4459-97f4-d5dd6670597e",
+      "id": "9dbf3ca4-d406-4b87-86fb-0e76692fb35f",
       "name": "Size List"
     },
     {
@@ -117,10 +117,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -3808,
-        -1040
+        -1088,
+        -1344
       ],
-      "id": "c75ef0a9-c4ce-435c-aec7-0dfa5f634cd2",
+      "id": "b78e2d8a-d140-4b68-b6e8-bbc25f521c01",
       "name": "Dimension Form",
       "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09",
       "notesInFlow": false
@@ -132,10 +132,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3584,
-        -1040
+        -864,
+        -1344
       ],
-      "id": "92f80676-15ed-43d7-9ccc-39943d33dfb8",
+      "id": "85424577-142c-42b1-938f-1637e5b3d72c",
       "name": "Deck Feature List"
     },
     {
@@ -149,10 +149,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -3360,
-        -1040
+        -640,
+        -1344
       ],
-      "id": "f0a4c1c9-59df-437c-b678-c8ed1af3dfc7",
+      "id": "ecb9535e-80e1-4587-a1de-ea574f7948f1",
       "name": "Deck Feature Form",
       "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
     },
@@ -163,10 +163,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3136,
-        -1040
+        -416,
+        -1344
       ],
-      "id": "9f472d1d-42e0-4141-964a-1f267a14b227",
+      "id": "8da5514f-1c57-4d97-9295-3fab24f8fa22",
       "name": "Handing List"
     },
     {
@@ -180,10 +180,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -2912,
-        -1040
+        -192,
+        -1344
       ],
-      "id": "b51501fa-7c4d-4236-9a0d-8f4bcdbbabc9",
+      "id": "9f4d7d53-9482-4651-aa5c-134fcab941f0",
       "name": "Handing Form",
       "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
     },
@@ -194,10 +194,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2688,
-        -1040
+        32,
+        -1344
       ],
-      "id": "38a2fabf-7559-4653-bee2-5c3b4766bd89",
+      "id": "ecf11c55-b36d-4952-afe4-22315d896b8e",
       "name": "Color List"
     },
     {
@@ -211,10 +211,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -2464,
-        -1040
+        256,
+        -1344
       ],
-      "id": "603de99b-21f1-46a3-92db-2513a99678e3",
+      "id": "e746c10d-a8de-44e6-8eac-70f5da187e1e",
       "name": "Color Form",
       "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
     },
@@ -225,10 +225,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2240,
-        -1040
+        480,
+        -1344
       ],
-      "id": "bdd47cb3-7fe1-4c0d-9160-d531f256886b",
+      "id": "a1be06c1-0791-4025-8c8e-0a04a8726d48",
       "name": "Finish List"
     },
     {
@@ -242,10 +242,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -2016,
-        -1040
+        704,
+        -1344
       ],
-      "id": "b3f2904b-3505-449e-b7b6-f57a05ce1b74",
+      "id": "c3a2fd6d-ca43-4cc7-8a28-eee096e12c32",
       "name": "Surface Finish Form",
       "webhookId": "015215ca-4fbf-4281-a291-3b7a5b83de09"
     },
@@ -256,10 +256,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1280,
-        -1040
+        1440,
+        -1344
       ],
-      "id": "cc058eeb-9dc0-4d49-a98e-c01e82f15ae8",
+      "id": "84115681-3fde-4ee1-b0c0-3b76fe0cadc6",
       "name": "product",
       "executeOnce": false
     },
@@ -274,37 +274,37 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        880,
-        -1232
+        3600,
+        -1536
       ],
-      "id": "da62155f-dcdc-4717-bbb0-25edc1c9ff91",
+      "id": "c9f7b3ad-69b4-49c4-a2dc-4ed7d0a91d82",
       "name": "TMU Second HBR Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = $('HBR').first().json.secondHeatingZone\nif ($(\"TMU Second HBR Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = $('HBR').first().json.secondHeatingZone\nif ($(\"TMU Second HBR Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1104,
-        -1232
+        3824,
+        -1536
       ],
-      "id": "fb4af5c1-a07c-4f7a-bf18-fb450ed6ef82",
+      "id": "72123a33-28c2-4b4c-884e-a47d197f013d",
       "name": "Second HBR"
     },
     {
       "parameters": {
-        "jsCode": "let secondHeatingZone = []\nlet options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMMOD00T-02 2nd not available\t\t\t\t\t\t\t\t\t\t\t\n// BAMSRB00T-02 2nd included\n// BSCMOF00T-01 2nd + price\n// Product_SKU = \"BSCMOF00T-01\"\n$(\"Options Sheet Collection\").all().forEach((option) => {\n  if (\n    option.json[\"PRODUCT SKU\"] === Product_SKU &&\n    option.json[\"FEATURE\"] == \"WTS\"\n  ) {\n    if (option.json[\"Option Price\"] > 0) {\n      secondHeatingZone.push(option.json)\n    } else {\n      options.push(option.json)\n    }\n  }\n})\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nconst dropdown = {\n  \"fieldLabel\": \"Second Heated Backrest\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": secondHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options, secondHeatingZone }"
+        "jsCode": "let secondHeatingZone = []\nlet options = []\n\nlet Product_SKU = $('product').first().json.configuration.base.Product_SKU\n// BAMMOD00T-02 2nd not available\t\t\t\t\t\t\t\t\t\t\t\n// BAMSRB00T-02 2nd included\n// BSCMOF00T-01 2nd + price\n// Product_SKU = \"BSCMOF00T-01\"\n$(\"Options Sheet Collection\").all().forEach((option) => {\n  if (\n    option.json[\"PRODUCT SKU\"] === Product_SKU &&\n    option.json[\"FEATURE\"] == \"WTS\"\n  ) {\n    if (option.json[\"Option Price\"] > 0) {\n      secondHeatingZone.push(option.json)\n    } else {\n      options.push(option.json)\n    }\n  }\n})\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nconst dropdown = {\n  \"fieldLabel\": \"Second Heated Backrest\",\n  \"fieldType\": \"dropdown\",\n  \"fieldOptions\": {\n    \"values\": secondHeatingZone.map((option) => {\n      return { option: `${option.PRODUCT_OPTION_NAME}, +$${option[\"Option Price\"]}` }\n    })\n  },\n  \"requiredField\": false\n}\n\nreturn { form: [ dropdown ], options, secondHeatingZone }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        208,
-        -1168
+        2928,
+        -1472
       ],
-      "id": "ce46fae2-acba-4d76-aa21-498f863f10ff",
+      "id": "1d1486c0-1ba8-4ac0-b644-9578999868ae",
       "name": "HBR",
       "executeOnce": false
     },
@@ -315,10 +315,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -240,
-        -928
+        2480,
+        -1232
       ],
-      "id": "cd42a920-4fbe-4368-8049-6d8abce7d18c",
+      "id": "99bcaa27-fa18-48c3-9aff-0e2f37e95eb6",
       "name": "WTS",
       "executeOnce": false
     },
@@ -333,24 +333,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -16,
-        -928
+        2704,
+        -1232
       ],
-      "id": "74729e7d-6528-451b-8db1-b5f2d6b65b09",
+      "id": "b2a1ce3b-4c5e-46c4-acf6-8778427fab08",
       "name": "Tub First WTS Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = $('WTS').first().json.firstHeatingZone\nif ($(\"Tub First WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = $('WTS').first().json.firstHeatingZone\nif ($(\"Tub First WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        208,
-        -928
+        2928,
+        -1232
       ],
-      "id": "010dacf8-b1c7-495b-b8e8-3c6d53cec54c",
+      "id": "ad793a62-d7e2-40e7-8e40-54bbfe91779f",
       "name": "First WTS"
     },
     {
@@ -381,10 +381,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        656,
-        -1168
+        3376,
+        -1472
       ],
-      "id": "9da6a211-4eb1-4727-9809-226518cb374a",
+      "id": "63937dc6-d52b-46fd-9375-d654fadd3c22",
       "name": "If Second HBR"
     },
     {
@@ -398,24 +398,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        880,
-        -848
+        3600,
+        -1152
       ],
-      "id": "03832352-5955-4baf-9e91-661d4e1d2959",
+      "id": "355a4dbf-f42e-4123-ab08-65accdc35f53",
       "name": "Tub Second WTS Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = $('WTS').first().json.secondHeatingZone\nif ($(\"Tub Second WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = $('WTS').first().json.secondHeatingZone\nif ($(\"Tub Second WTS Form\").first().json[\"Second Heated Backrest\"] === '') {\n  options = []\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1104,
-        -848
+        3824,
+        -1152
       ],
-      "id": "16e93bbe-531a-4dec-a131-4fe146f672ce",
+      "id": "54e378ad-f1bc-4da0-a74b-d9591681ce5c",
       "name": "Second WTS"
     },
     {
@@ -425,10 +425,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1552,
-        -1040
+        4272,
+        -1344
       ],
-      "id": "ec684a82-68d4-48f3-82e4-7cc936a68a2a",
+      "id": "1df1fb81-8688-498e-ac9c-680004f40042",
       "name": "Aroma"
     },
     {
@@ -459,10 +459,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        1776,
-        -1040
+        4496,
+        -1344
       ],
-      "id": "187ff6f4-8aad-4d60-9d87-3953c05eb7a9",
+      "id": "11dc72fa-8707-42a1-b796-0a935b31aa2f",
       "name": "If Aroma"
     },
     {
@@ -476,24 +476,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        2000,
-        -1120
+        4720,
+        -1424
       ],
-      "id": "0d54c9bc-8a79-4847-bcb7-a66a5db5cad5",
+      "id": "c27c69ff-7b2a-4ef4-bb17-032d38690fcf",
       "name": "Aroma Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Aroma').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Aroma Form\").first().json[\"Aromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Aroma').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Aroma Form\").first().json[\"Aromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2224,
-        -1120
+        4944,
+        -1424
       ],
-      "id": "c0e13ff9-1654-4dd2-b351-b462c30f18a4",
+      "id": "50969ff8-738c-4003-b4d1-8dd89d2bcdc2",
       "name": "Aroma Selection"
     },
     {
@@ -503,10 +503,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2672,
-        -1040
+        5392,
+        -1344
       ],
-      "id": "3d58e620-f498-4c62-8740-4ae5d4c8476b",
+      "id": "f7771cd0-02fe-494b-9a76-ec1d95716a8b",
       "name": "Chromo"
     },
     {
@@ -537,10 +537,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        2896,
-        -1040
+        5616,
+        -1344
       ],
-      "id": "020039ae-03d3-4bc7-82a8-da188dff32b0",
+      "id": "299e7163-afeb-41b0-8037-6f954fcbde06",
       "name": "If Chromo"
     },
     {
@@ -554,24 +554,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        3120,
-        -1120
+        5840,
+        -1424
       ],
-      "id": "2ae3e969-485a-457d-9c22-593be82fe82b",
+      "id": "107919dd-6818-41a7-9bdc-7b2a92e744fb",
       "name": "Chromo Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Chromo').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Chromo Form\").first().json[\"Chromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Chromo').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Chromo Form\").first().json[\"Chromatherapy\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3344,
-        -1120
+        6064,
+        -1424
       ],
-      "id": "8e75ff96-ad7b-485f-a4e2-9da24d1f0352",
+      "id": "2586a966-9522-4081-88d8-99a807bc3ced",
       "name": "Chromo Selection"
     },
     {
@@ -636,10 +636,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3,
       "position": [
-        -464,
-        -1040
+        2256,
+        -1344
       ],
-      "id": "1c9a49f7-74fc-4788-8fad-b4a0091be21d",
+      "id": "5667fe8f-4f50-4b3f-80e1-dc938a435a25",
       "name": "Line Switch"
     },
     {
@@ -704,10 +704,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3,
       "position": [
-        3792,
-        -1120
+        6512,
+        -1424
       ],
-      "id": "08421023-baab-42b2-b3b2-47edfc7ea15d",
+      "id": "5dd269ba-1d5d-41cc-818e-29b99c86795a",
       "name": "Control Switch"
     },
     {
@@ -717,10 +717,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        4016,
-        -1184
+        6736,
+        -1488
       ],
-      "id": "8a175712-ffae-40bf-99c1-ceab8eb30196",
+      "id": "52a7870a-9089-4d6c-9b35-b3b6e358d563",
       "name": "MIA Control"
     },
     {
@@ -734,24 +734,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        4240,
-        -1184
+        6960,
+        -1488
       ],
-      "id": "eb6aa6a3-7338-4f4d-bbf5-4100c78f9b32",
+      "id": "85db7962-4903-4e6a-8fe4-e8bdb15c00d7",
       "name": "MIA Control Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('MIA Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"MIA Control Form\").first().json[\"MIA Control\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('MIA Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"MIA Control Form\").first().json[\"MIA Control\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        4464,
-        -1184
+        7184,
+        -1488
       ],
-      "id": "8ad08494-231f-47c6-b880-27707a31e9c9",
+      "id": "ddb4c435-b6dd-4c90-b1fc-c632c4656433",
       "name": "MIA Control Selection"
     },
     {
@@ -761,10 +761,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        4912,
-        -1184
+        7632,
+        -1488
       ],
-      "id": "c4e58f83-2271-4028-9062-6a3759175eba",
+      "id": "da071eb0-ee77-48f0-8719-6898937eaae4",
       "name": "BU-Touch Control"
     },
     {
@@ -778,24 +778,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        5136,
-        -1184
+        7856,
+        -1488
       ],
-      "id": "3c19e0c5-43b7-41ae-9301-693a238ab23f",
+      "id": "36f65cba-435b-48d0-a148-79fd600b7dfb",
       "name": "BU-Touch Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('BU-Touch Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"BU-Touch Form\").first().json[\"BU-Touch Control\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('BU-Touch Control').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"BU-Touch Form\").first().json[\"BU-Touch Control\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        5360,
-        -1184
+        8080,
+        -1488
       ],
-      "id": "08e501d2-24b1-4e4b-8b06-30b044bab0eb",
+      "id": "94cfb55b-e869-4df2-a2ea-87c863096f20",
       "name": "BU-Touch Control Selection"
     },
     {
@@ -805,10 +805,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        6256,
-        -976
+        8976,
+        -1280
       ],
-      "id": "98a1135d-8805-40c5-b397-7e29c920a4f8",
+      "id": "7a1f15c8-c016-48a6-bc7c-7f67a37272fc",
       "name": "Grab Bars"
     },
     {
@@ -839,23 +839,23 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        6480,
-        -976
+        9200,
+        -1280
       ],
-      "id": "561028db-88b8-4a39-8ce7-b593b0b1ec7d",
+      "id": "4c16ff12-0d50-40b0-9c52-e92fed10fdb6",
       "name": "If Grab Bars"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Grab Bars').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Grab Bars Form\").first().json[\"Grab Bars\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Grab Bars').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Grab Bars Form\").first().json[\"Grab Bars\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        6928,
-        -896
+        9648,
+        -1200
       ],
-      "id": "a4fbff4d-2c93-4c81-821e-980e6a47ae3f",
+      "id": "cb168021-0063-4c5a-b86a-49cd9e5605b9",
       "name": "Grab Bars Selection"
     },
     {
@@ -869,10 +869,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        6704,
-        -896
+        9424,
+        -1200
       ],
-      "id": "6d0cc2d0-fcbc-4bc1-bd2a-f9dec76fa2aa",
+      "id": "248e3bfa-b81d-4aa5-aefa-26e958503d68",
       "name": "Grab Bars Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
@@ -883,10 +883,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        7376,
-        -1040
+        10096,
+        -1344
       ],
-      "id": "0815edca-a239-4131-a30c-7a35a062f320",
+      "id": "ba2ece1d-30e5-49bf-b801-2c3e9037abda",
       "name": "Tile Flange"
     },
     {
@@ -917,10 +917,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        7600,
-        -1040
+        10320,
+        -1344
       ],
-      "id": "922ea98e-a79a-4237-b2cc-096bf07ad52b",
+      "id": "9ddf4d51-9e7a-4140-b5ec-4f4ff9975f0a",
       "name": "If Tile Flange"
     },
     {
@@ -934,24 +934,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        7824,
-        -1120
+        10544,
+        -1424
       ],
-      "id": "d4126ada-2d8c-4c91-acf9-792bed0f522e",
+      "id": "d9005e36-d7ab-4c06-aa4d-fb7ebd877462",
       "name": "Tile Flange Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Tile Flange').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Tile Flange Form\").first().json[\"Tile Flange\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Tile Flange').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Tile Flange Form\").first().json[\"Tile Flange\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        8048,
-        -1120
+        10768,
+        -1424
       ],
-      "id": "66708bd1-1f31-4ac3-9131-226907532e7c",
+      "id": "9017aab1-d296-448b-ba4c-3b06c9bf7b6f",
       "name": "Tile Flange Selection"
     },
     {
@@ -992,10 +992,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        656,
-        -928
+        3376,
+        -1232
       ],
-      "id": "9543ea9f-9f20-4813-83a7-59e7aea97a74",
+      "id": "f9adac51-228f-45bb-9fad-2c531c139213",
       "name": "If Second WTS",
       "notesInFlow": false,
       "alwaysOutputData": false,
@@ -1008,10 +1008,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        8496,
-        -1040
+        11216,
+        -1344
       ],
-      "id": "7fda7453-5041-4aca-a8a4-25b34535af55",
+      "id": "bfe48101-7703-4486-86fa-8f7a3d05543a",
       "name": "Skirt"
     },
     {
@@ -1042,10 +1042,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        8720,
-        -1040
+        11440,
+        -1344
       ],
-      "id": "fbfadfcc-e3c7-48f1-bf51-8531afc36285",
+      "id": "c182ced0-455d-4ad1-9797-3efed9042311",
       "name": "If Skirt"
     },
     {
@@ -1059,24 +1059,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        8944,
-        -1120
+        11664,
+        -1424
       ],
-      "id": "1d687f70-8a1c-47fb-8d2f-a08697531de7",
+      "id": "89ebdf08-2585-4ef3-bb1d-4a5ed93832d2",
       "name": "Skirt Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Skirt').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Skirt Form\").first().json[\"Skirt\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Skirt').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Skirt Form\").first().json[\"Skirt\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        9168,
-        -1120
+        11888,
+        -1424
       ],
-      "id": "c80c167e-cf30-4673-a174-598c84d05613",
+      "id": "5b20782e-d3fb-45ad-9e5f-3c87bfae3dde",
       "name": "Skirt Selection"
     },
     {
@@ -1086,10 +1086,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        9616,
-        -1040
+        12336,
+        -1344
       ],
-      "id": "f0cefca0-3585-4039-bc64-7a2d89c51532",
+      "id": "ea840ecf-7d80-4808-9ab7-3f88a669f485",
       "name": "Feet"
     },
     {
@@ -1130,10 +1130,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        9840,
-        -1040
+        12560,
+        -1344
       ],
-      "id": "1d39aec6-9650-45fe-b900-6d41d038be57",
+      "id": "f78a1df2-7c0b-4627-a307-04fd56bc8e8a",
       "name": "If Feet"
     },
     {
@@ -1147,37 +1147,37 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        10064,
-        -1120
+        12784,
+        -1424
       ],
-      "id": "bc9daa5b-3d4e-4f18-8fb4-204ff919f455",
+      "id": "25b4e37e-1550-4247-ad82-389b1181a0f9",
       "name": "Feet Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Feet').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Feet Form\").first().json[\"Feet\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Feet').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Feet Form\").first().json[\"Feet\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        10288,
-        -1120
+        13008,
+        -1424
       ],
-      "id": "c9e9de1d-e704-4617-8db0-3a04f94d2db8",
+      "id": "d200a9ea-0a77-4008-a189-978c55385a4e",
       "name": "Feet Selection"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Deck').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Deck Form\").first().json[\"Deck\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Deck').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Deck Form\").first().json[\"Deck\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        11408,
-        -1120
+        14128,
+        -1424
       ],
-      "id": "55679468-b8a9-447c-884f-c41b657ad320",
+      "id": "38a97dcd-4aac-4672-9d9e-fbad13328142",
       "name": "Deck Selection"
     },
     {
@@ -1191,10 +1191,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        11184,
-        -1120
+        13904,
+        -1424
       ],
-      "id": "ff14140f-176e-4898-ad85-87ec49537fea",
+      "id": "e2d4b27d-eccd-4f9a-b316-d828d4635211",
       "name": "Deck Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
@@ -1226,10 +1226,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        10960,
-        -1040
+        13680,
+        -1344
       ],
-      "id": "e1a3ac63-adb9-44ae-a68a-ba5435e76ccb",
+      "id": "47ec874c-0dd8-48f6-8995-f9113c573229",
       "name": "If Deck"
     },
     {
@@ -1239,10 +1239,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        10736,
-        -1040
+        13456,
+        -1344
       ],
-      "id": "96ad1a5d-6f4a-48b7-acfe-f3da4c76133d",
+      "id": "b72c545e-079d-49c6-82a0-9daf13aeb10b",
       "name": "Deck"
     },
     {
@@ -1252,10 +1252,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        11856,
-        -1040
+        14576,
+        -1344
       ],
-      "id": "e00a1ebf-3a7e-42fe-b699-e222873ea7b2",
+      "id": "22cbd806-1059-462e-a732-33f225f4e82e",
       "name": "Cushion"
     },
     {
@@ -1286,10 +1286,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        12080,
-        -1040
+        14800,
+        -1344
       ],
-      "id": "160fbfb9-4335-431b-af91-b1ff962a06bb",
+      "id": "5e94a490-1369-4d9b-b063-4b392aa18456",
       "name": "If Cushion"
     },
     {
@@ -1303,24 +1303,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        12304,
-        -1120
+        15024,
+        -1424
       ],
-      "id": "e821c6dc-5458-4078-b381-87c8bc2ac689",
+      "id": "21df320e-c746-44ae-87a1-0073858653a8",
       "name": "Cushion Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Cushion').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Cushion Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Cushion').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Cushion Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        12528,
-        -1120
+        15248,
+        -1424
       ],
-      "id": "c6447e33-9ffe-41cb-add0-1edc23c4c45c",
+      "id": "ccbde19f-8e16-4b7c-b993-a84ba99d955b",
       "name": "Cushion Selection"
     },
     {
@@ -1330,10 +1330,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        12976,
-        -1040
+        15696,
+        -1344
       ],
-      "id": "ed653f56-2216-4e97-ae4a-61973cff6e34",
+      "id": "31a5f908-7da6-41cb-a184-b7d12d88533b",
       "name": "Island Tub Drain"
     },
     {
@@ -1364,10 +1364,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        13200,
-        -1040
+        15920,
+        -1344
       ],
-      "id": "80d24c65-9684-458f-8642-7316524b56e8",
+      "id": "87f4762e-98e2-4df8-ab6d-ab571b0cdfbe",
       "name": "If Island Tub Drain"
     },
     {
@@ -1381,53 +1381,53 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        13424,
-        -1120
+        16144,
+        -1424
       ],
-      "id": "320c8c4c-461d-4488-91a7-6df7269bf959",
+      "id": "e69428cd-75ba-4114-a483-0300f4c124fe",
       "name": "Island Tub Drain Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Island Tub Drain').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Island Tub Drain Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Island Tub Drain').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Island Tub Drain Form\").first().json[\"Cushion\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        13648,
-        -1120
+        16368,
+        -1424
       ],
-      "id": "9d6c0bca-3081-4dd6-b16d-ce6e5830d8aa",
+      "id": "972e3b0d-a399-42b6-a4ae-f652f8ed544b",
       "name": "Island Tub Drain Selection"
     },
     {
       "parameters": {
-        "jsCode": "const configuration = JSON.parse($input.first().json.options)\n\nconst options = configuration.options.filter((option) => {\n  return option?.TYPE === ''\n})\n\nconst instructions = configuration.options.filter((option) => {\n  return option?.TYPE === 'INSTRUCTION'\n})\n\nlet price = configuration.base.List_Price+configuration.base.Surface_Finish_Price\n\nfunction generateOptionsHTML(options) {\n  return options.map(option => {\n    price = price + option['Option Price']\n    return `  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>${option.PRODUCT_OPTION_NAME}</div>\n    <div>$${option['Option Price']}</div>\n  </div>`;\n  }).join('\\n');\n}\n\nconst html = `\n<div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 1em;\">\n    <div><strong>Configuration</strong></div>\n    <div>$${configuration.base.List_Price+configuration.base.Surface_Finish_Price}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between\">\n    <div>Model: ${configuration.base.Product_Name} (${configuration.base.Product_SKU})</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Color: ${configuration.base.Color}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Deck: ${configuration.base.Deck_Feature}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Handing: ${configuration.base.Handing}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Installation Type: ${configuration.base.Installation_Type}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Line: ${configuration.base.Line}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Surface Finish: ${configuration.base.Surface_Finish}</div>\n    <div>$${configuration.base.Surface_Finish_Price}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-top: 2em; margin-bottom: 1em;\">\n    <div><strong>Options</strong></div>\n  </div>\n${generateOptionsHTML(options)}\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-top: 2em; margin-bottom: 1em;\">\n    <div><strong>Instructions</strong></div>\n  </div>\n${generateOptionsHTML(instructions)}\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-top: 2em; margin-bottom: 1em;\">\n    <div><strong>Product Price</strong></div>\n    <div><strong>$${price}</strong></div>\n  </div>\n</div>`\n\nreturn { html }"
+        "jsCode": "const configuration = $input.first().json.configuration\n\nconst options = configuration.options.filter((option) => {\n  return option?.TYPE === ''\n})\n\nconst instructions = configuration.options.filter((option) => {\n  return option?.TYPE === 'INSTRUCTION'\n})\n\nlet price = configuration.base.List_Price+configuration.base.Surface_Finish_Price\n\nfunction generateOptionsHTML(options) {\n  return options.map(option => {\n    price = price + option['Option Price']\n    return `  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>${option.PRODUCT_OPTION_NAME}</div>\n    <div>$${option['Option Price']}</div>\n  </div>`;\n  }).join('\\n');\n}\n\nconst html = `\n<div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 1em;\">\n    <div><strong>Configuration</strong></div>\n    <div>$${configuration.base.List_Price+configuration.base.Surface_Finish_Price}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between\">\n    <div>Model: ${configuration.base.Product_Name} (${configuration.base.Product_SKU})</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Color: ${configuration.base.Color}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Deck: ${configuration.base.Deck_Feature}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Handing: ${configuration.base.Handing}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Installation Type: ${configuration.base.Installation_Type}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Line: ${configuration.base.Line}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between;\">\n    <div>Surface Finish: ${configuration.base.Surface_Finish}</div>\n    <div>$${configuration.base.Surface_Finish_Price}</div>\n  </div>\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-top: 2em; margin-bottom: 1em;\">\n    <div><strong>Options</strong></div>\n  </div>\n${generateOptionsHTML(options)}\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-top: 2em; margin-bottom: 1em;\">\n    <div><strong>Instructions</strong></div>\n  </div>\n${generateOptionsHTML(instructions)}\n  <div style=\"display: flex; flex-direction: row; justify-content: space-between; margin-top: 2em; margin-bottom: 1em;\">\n    <div><strong>Product Price</strong></div>\n    <div><strong>$${price}</strong></div>\n  </div>\n</div>`\n\nreturn { html }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        17008,
-        -1120
+        19728,
+        -1424
       ],
-      "id": "4a55fee8-c2a1-4f98-9bd2-b5b466d48f1c",
+      "id": "4a646057-9840-4fd7-9ba6-c95dd2bfd82d",
       "name": "Price"
     },
     {
       "parameters": {
         "options": {
           "formDescription": "={{ $input.first().json.html }}",
-          "buttonLabel": "Submit C"
+          "buttonLabel": "Submit Configuration"
         }
       },
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        17296,
-        -1120
+        20016,
+        -1424
       ],
-      "id": "08ed7509-982c-47ec-ac65-6ad4ee90000f",
+      "id": "b305f3bf-52ff-48ba-8f7c-6a18370ceae3",
       "name": "Price Form",
       "webhookId": "6bfe5117-80eb-4982-a34b-ab08cdafcf9c"
     },
@@ -1438,10 +1438,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        5808,
-        -1040
+        8528,
+        -1344
       ],
-      "id": "e23633e1-45c5-4ac6-a8e8-c31aa14d2a02",
+      "id": "8fd0cc0d-95f5-4bc4-8144-bb3e6590f667",
       "name": "Combo Feet & Armrest"
     },
     {
@@ -1472,10 +1472,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        6032,
-        -1040
+        8752,
+        -1344
       ],
-      "id": "8aa621b3-1e58-4a52-9807-84cc5386e2ba",
+      "id": "72162a28-4f5d-4b1c-bb43-1f90edb2e63d",
       "name": "If Combo Feet & Armrest"
     },
     {
@@ -1489,24 +1489,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        6704,
-        -1184
+        9424,
+        -1488
       ],
-      "id": "4914c3d8-c868-4364-a135-f9200d3b52a9",
+      "id": "a4aa875f-bda8-4a79-babf-a5c1fa1f6a23",
       "name": "Combo Feet & Armrest Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Combo Feet & Armrest').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Combo Feet & Armrest Form\").first().json[\"Combo Feet & Armrest\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Combo Feet & Armrest').first().json.options) {\n  if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Combo Feet & Armrest Form\").first().json[\"Combo Feet & Armrest\"]) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        6928,
-        -1184
+        9648,
+        -1488
       ],
-      "id": "d903f995-094f-46fe-94a4-9ea47b1f73ad",
+      "id": "7addee6f-8ce3-4e62-88e3-1e02ebdb2d7b",
       "name": "Combo Feet & Armrest Selection"
     },
     {
@@ -1516,10 +1516,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        14096,
-        -1040
+        16816,
+        -1344
       ],
-      "id": "b21bc9d2-3354-46ff-a9f8-c0e91ac42e10",
+      "id": "6671a02e-483e-4bf8-8b05-cafb9af8b1f2",
       "name": "Drain And Overflow Material"
     },
     {
@@ -1533,10 +1533,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        14320,
-        -1040
+        17040,
+        -1344
       ],
-      "id": "065e7f80-e41d-4396-a482-f295d69dd6d4",
+      "id": "64eec93c-b565-4953-804c-b28733696101",
       "name": "Drain And Overflow Material Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
@@ -1547,10 +1547,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        14992,
-        -1184
+        17712,
+        -1488
       ],
-      "id": "312612b7-b20a-4570-b2d5-52871a7b5f9f",
+      "id": "59a1b2c4-dbda-44a9-9bdc-b5c611c2bec3",
       "name": "Drain And Overflow"
     },
     {
@@ -1564,24 +1564,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        15216,
-        -1184
+        17936,
+        -1488
       ],
-      "id": "2f10def0-fb1c-468e-a440-bde9015d148b",
+      "id": "8b93ba3f-557a-4ca0-b7e8-fc6af017f797",
       "name": "Drain And Overflow Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nif ($('Drain And Overflow Material Form').first().json['Drain And Overflow']) {\n  options .push(    \n    {\n      \"OPTION SKU\": \"BOVER00-00\",\n      \"PRODUCT_OPTION_NAME\": \"NO DRAIN\",\n      \"Option Price\": 0,\n    })\n} else {\n  for (const item of $('Drain And Overflow').first().json.options) {\n    if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Drain And Overflow Form\").first().json[\"Drain And Overflow\"]) {\n      options.push(item)\n    }\n  }  \n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nif ($('Drain And Overflow Material Form').first().json['Drain And Overflow']) {\n  options .push(    \n    {\n      \"OPTION SKU\": \"BOVER00-00\",\n      \"PRODUCT_OPTION_NAME\": \"NO DRAIN\",\n      \"Option Price\": 0,\n    })\n} else {\n  for (const item of $('Drain And Overflow').first().json.options) {\n    if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Drain And Overflow Form\").first().json[\"Drain And Overflow\"]) {\n      options.push(item)\n    }\n  }  \n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        15440,
-        -1120
+        18160,
+        -1424
       ],
-      "id": "73bdff02-bdd6-4992-a1ae-6eb9b29944ab",
+      "id": "5810282e-7547-46d5-bb82-67ca2fb56fe2",
       "name": "Drain And Overflow Selection"
     },
     {
@@ -1669,10 +1669,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.3,
       "position": [
-        14544,
-        -1056
+        17264,
+        -1360
       ],
-      "id": "d4459023-9633-48ba-acae-2e4dda4eef4c",
+      "id": "31f872e0-d498-4d97-8096-0281c1cc0fd6",
       "name": "Drain And Overflow Material Form Switch"
     },
     {
@@ -1682,10 +1682,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        15888,
-        -1120
+        18608,
+        -1424
       ],
-      "id": "c714b1e5-be3c-4d47-b3fc-d0f585657bad",
+      "id": "df67f588-c59c-40f4-a881-08a572693cf2",
       "name": "Early Motor Shipment"
     },
     {
@@ -1699,24 +1699,24 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        16112,
-        -1120
+        18832,
+        -1424
       ],
-      "id": "b39e7bce-c9ca-4381-b22e-050da2b4ed72",
+      "id": "a74d907a-0b53-49c9-a28f-374fb133a961",
       "name": "Early Motor Shipment Form",
       "webhookId": "af14ef22-9149-4bf0-b551-37c0244cd766"
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Early Motor Shipment').first().json.options) {\n  if (\n    `${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] &&\n    $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] === `EARLY MOTOR SHIPMENT, +$${item[\"Option Price\"]}`\n     ) {\n    options.push(item)\n  }\n}\n\nconst axios = require('axios')\nvar configuration\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  configuration = JSON.parse(response.data.get)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nawait axios.post('https://intercrinal-undegenerated-lavonne.ngrok-free.dev/api/v1/order-line-8e6e1d01', { configuration })\n// await axios.post('https://edge.bainultra.dev/api/v1/order-line-8e6e1d01', { configuration })\n\nreturn { configuration, options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Early Motor Shipment').first().json.options) {\n  if (\n    `${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] &&\n    $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] === `EARLY MOTOR SHIPMENT, +$${item[\"Option Price\"]}`\n     ) {\n    options.push(item)\n  }\n}\n\nvar configuration\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\n// await axios.post('https://intercrinal-undegenerated-lavonne.ngrok-free.dev/api/v1/order-line-8e6e1d01', { configuration })\n// await axios.post('https://edge.bainultra.dev/api/v1/order-line-8e6e1d01', { configuration })\n\nreturn { configuration, options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        16544,
-        -1120
+        19264,
+        -1424
       ],
-      "id": "318f9cbe-cdc7-48fc-984a-277d3f92b321",
+      "id": "d035c916-5b1f-4041-8b94-bcc519c321ae",
       "name": "Early Motor Shipment Selection"
     },
     {
@@ -1730,10 +1730,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        -1568,
-        -1040
+        1152,
+        -1344
       ],
-      "id": "e1309459-2467-4ba3-9d1b-039cd71ab51d",
+      "id": "60367332-8439-408a-a22e-85aa5418d695",
       "name": "Line Form",
       "webhookId": "6ecb2fe7-e6a4-46dc-8846-d39de88f8d6b"
     },
@@ -1744,10 +1744,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1792,
-        -1040
+        928,
+        -1344
       ],
-      "id": "e6699e42-c3fb-4cd5-870c-52ca8675f256",
+      "id": "d3a3c933-0b8a-4bd0-8f3b-541aff4c28b7",
       "name": "Line"
     },
     {
@@ -1772,10 +1772,10 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        14768,
-        -1184
+        17488,
+        -1488
       ],
-      "id": "b4f2bb70-9de7-4348-aeec-6d099b3d3ae4",
+      "id": "617bcd6d-a916-48b3-b3e7-e2aba074f28d",
       "name": "Drain And Overflow Brass Sheet Collection",
       "credentials": {
         "googleApi": {
@@ -1806,10 +1806,10 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        14768,
-        -896
+        17488,
+        -1200
       ],
-      "id": "c607492d-548c-4c68-a077-adacecdd4173",
+      "id": "c3ff6472-5990-480d-83b2-2ed00c70f3fb",
       "name": "Drain And Overflow PVC Sheet Collection",
       "credentials": {
         "googleApi": {
@@ -1827,10 +1827,10 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 2.3,
       "position": [
-        17744,
-        -1120
+        20464,
+        -1424
       ],
-      "id": "5291de58-bb4b-4343-8a90-4841a1a5683d",
+      "id": "f98d35ba-5d3e-4114-ba5f-483b7a3d374d",
       "name": "Form",
       "webhookId": "aa4a9f46-cf16-42ca-9223-db07b827d996"
     },
@@ -1851,12 +1851,12 @@
       "type": "n8n-nodes-base.formTrigger",
       "typeVersion": 2.3,
       "position": [
-        -5808,
-        -1040
+        -3360,
+        -1344
       ],
-      "id": "11ff31be-5f71-416f-a276-f623380f6c9c",
+      "id": "8e356af5-7854-4d5e-8373-5b25b11dff67",
       "name": "Customer Order Form",
-      "webhookId": "2b3df582-959f-416d-b98c-2fed161a980e"
+      "webhookId": "ee120c52-b853-41f4-9204-0e0f309a96cd"
     },
     {
       "parameters": {
@@ -1865,24 +1865,11 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -5584,
-        -1040
+        -2864,
+        -1344
       ],
-      "id": "a9c2bfb3-712e-4514-a674-5ae403ed79d7",
+      "id": "1c5d5048-bca8-4128-acc3-8df34e496a1a",
       "name": "Products Sheet Collection"
-    },
-    {
-      "parameters": {
-        "jsCode": "const { fetch } = require('undici')\n\nvar response = await fetch('http://localhost:7379/get/options')\nresponse = await response.json()\nvar options = JSON.parse(response.get)\n\noptions = options.filter((option) => {\n  return option[\"PRODUCT SKU\"] === $('product').first().json.configuration.base.Product_SKU\n})\n\nreturn options"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        -784,
-        -1040
-      ],
-      "id": "0d4c2ce9-800c-4a73-949b-01a3b6e6551a",
-      "name": "Options Sheet Collection"
     },
     {
       "parameters": {
@@ -1891,11 +1878,24 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1072,
-        -1040
+        -3104,
+        -1200
       ],
-      "id": "24eab2e8-35a9-4344-b70d-538551161339",
-      "name": "Code in JavaScript"
+      "id": "2394014a-44dd-402e-9f40-05760cf222d2",
+      "name": "Debug"
+    },
+    {
+      "parameters": {
+        "jsCode": "const { fetch } = require('undici')\n\nvar response = await fetch('http://localhost:7379/get/options')\nresponse = await response.json()\nvar options = JSON.parse(response.get)\n\noptions = options.filter((option) => {\n  return option[\"PRODUCT SKU\"] === $('product').first().json.configuration.base.Product_SKU\n})\n\nreturn options"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1936,
+        -1344
+      ],
+      "id": "9609d572-dfec-41e2-b8b8-73cdc178d158",
+      "name": "Options Sheet Collection"
     }
   ],
   "connections": {
@@ -2079,7 +2079,7 @@
       "main": [
         [
           {
-            "node": "Code in JavaScript",
+            "node": "Options Sheet Collection",
             "type": "main",
             "index": 0
           }
@@ -3023,22 +3023,22 @@
         ]
       ]
     },
-    "Options Sheet Collection": {
+    "Debug": {
       "main": [
         [
           {
-            "node": "Line Switch",
+            "node": "Products Sheet Collection",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Code in JavaScript": {
+    "Options Sheet Collection": {
       "main": [
         [
           {
-            "node": "Options Sheet Collection",
+            "node": "Line Switch",
             "type": "main",
             "index": 0
           }
