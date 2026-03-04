@@ -1573,7 +1573,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nif ($('Drain And Overflow Material Form').first().json['Drain And Overflow']) {\n  options .push(    \n    {\n      \"OPTION SKU\": \"BOVER00-00\",\n      \"PRODUCT_OPTION_NAME\": \"NO DRAIN\",\n      \"Option Price\": 0,\n    })\n} else {\n  for (const item of $('Drain And Overflow').first().json.options) {\n    if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Drain And Overflow Form\").first().json[\"Drain And Overflow\"]) {\n      options.push(item)\n    }\n  }  \n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
+        "jsCode": "let options = []\n\nif ($('Drain And Overflow Material Form').first().json['Drain And Overflow'] === 'None') {\n  options.push(    \n    {\n      \"OPTION SKU\": \"BOVER00-00\",\n      \"PRODUCT_OPTION_NAME\": \"NO DRAIN\",\n      \"Option Price\": 0,\n    })\n} else {\n  for (const item of $('Drain And Overflow').first().json.options) {\n    if (`${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Drain And Overflow Form\").first().json[\"Drain And Overflow\"]) {\n      options.push(item)\n    }\n  }  \n}\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  const configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1708,7 +1708,7 @@
     },
     {
       "parameters": {
-        "jsCode": "let options = []\n\nfor (const item of $('Early Motor Shipment').first().json.options) {\n  if (\n    `${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] &&\n    $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] === `EARLY MOTOR SHIPMENT, +$${item[\"Option Price\"]}`\n     ) {\n    options.push(item)\n  }\n}\n\nvar configuration\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\n// await axios.post('https://intercrinal-undegenerated-lavonne.ngrok-free.dev/api/v1/order-line-8e6e1d01', { configuration })\n// await axios.post('https://edge.bainultra.dev/api/v1/order-line-8e6e1d01', { configuration })\n\nreturn { configuration, options }"
+        "jsCode": "let options = []\n\nfor (const item of $('Early Motor Shipment').first().json.options) {\n  if (\n    `${item.PRODUCT_OPTION_NAME}, +$${item[\"Option Price\"]}` === $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] &&\n    $(\"Early Motor Shipment Form\").first().json[\"Early Motor Shipment\"] === `EARLY MOTOR SHIPMENT, +$${item[\"Option Price\"]}`\n     ) {\n    options.push(item)\n  }\n}\n\nvar configuration\n\nconst axios = require('axios')\nasync function addOptions() {\n  const key = $('product').first().json.key\n  const response = await axios.get(`http://localhost:7379/get/${key}`)\n  configuration = JSON.parse(response.data.get)\n  configuration.options.push(...options)\n  \n  await axios.get(`http://localhost:7379/set/${key}/${encodeURIComponent(JSON.stringify(configuration))}`)\n}\nawait addOptions()\n\nreturn { configuration, options }"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1873,19 +1873,6 @@
     },
     {
       "parameters": {
-        "jsCode": "const axios = require('axios')\n\nconst key = $('product').first().json.key\nconst response = await axios.get(`http://localhost:7379/get/${key}`)\nconst configuration = JSON.parse(response.data.get)\n\n// await axios.post('https://intercrinal-undegenerated-lavonne.ngrok-free.dev/api/v1/order-line-8e6e1d01', { configuration })\nawait axios.post('https://edge.bainultra.dev/api/v1/order-line-8e6e1d01', { configuration })\n\nreturn {}"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        -3104,
-        -1200
-      ],
-      "id": "2394014a-44dd-402e-9f40-05760cf222d2",
-      "name": "Debug"
-    },
-    {
-      "parameters": {
         "jsCode": "const { fetch } = require('undici')\n\nvar response = await fetch('http://localhost:7379/get/options')\nresponse = await response.json()\nvar options = JSON.parse(response.get)\n\noptions = options.filter((option) => {\n  return option[\"PRODUCT SKU\"] === $('product').first().json.configuration.base.Product_SKU\n})\n\nreturn options"
       },
       "type": "n8n-nodes-base.code",
@@ -1896,6 +1883,19 @@
       ],
       "id": "9609d572-dfec-41e2-b8b8-73cdc178d158",
       "name": "Options Sheet Collection"
+    },
+    {
+      "parameters": {
+        "jsCode": "const axios = require('axios')\n\nconst key = $('product').first().json.key\nconst response = await axios.get(`http://localhost:7379/get/${key}`)\nconst configuration = JSON.parse(response.data.get)\n\n// await axios.post('https://intercrinal-undegenerated-lavonne.ngrok-free.dev/api/v1/order-line-8e6e1d01', { configuration })\nawait axios.post('https://edge.bainultra.dev/api/v1/order-line-8e6e1d01', { configuration })\n\nreturn {}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        20256,
+        -1424
+      ],
+      "id": "396db2db-4046-4d1b-8d9b-3f88cfdf30b6",
+      "name": "Submit Configuration"
     }
   ],
   "connections": {
@@ -2786,7 +2786,7 @@
       "main": [
         [
           {
-            "node": "Form",
+            "node": "Submit Configuration",
             "type": "main",
             "index": 0
           }
@@ -3023,22 +3023,22 @@
         ]
       ]
     },
-    "Debug": {
+    "Options Sheet Collection": {
       "main": [
         [
           {
-            "node": "Products Sheet Collection",
+            "node": "Line Switch",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Options Sheet Collection": {
+    "Submit Configuration": {
       "main": [
         [
           {
-            "node": "Line Switch",
+            "node": "Form",
             "type": "main",
             "index": 0
           }
